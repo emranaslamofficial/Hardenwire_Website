@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="A person holding a smartphone in one hand while using it">
+  <rect width="1200" height="675" fill="#eef1f5"/>
+  <path d="M120 590 H1080" stroke="#d5dbe4" stroke-width="2"/>
+  <g transform="translate(600 345) scale(.82) translate(-850 -340)">
+    <rect x="760" y="140" width="300" height="170" rx="16" fill="#d5dbe4" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="710" y="230" width="300" height="170" rx="16" fill="#ffffff" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="660" y="320" width="300" height="170" rx="16" fill="#ffffff" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M760 405 l35 35 l70 -75" fill="none" stroke="#c8102e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M750 275 h120 M750 300 h80" stroke="#a7b0bd" stroke-width="7" stroke-linecap="round"/></g>
+</svg>

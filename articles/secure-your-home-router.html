@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" data-font="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Secure Your Home Router: 10 Settings to Change Today | Hardenwire</title>
+<meta name="description" content="A practical 10-step checklist to secure your home Wi-Fi router: admin password, firmware updates, WPA3, WPS, remote access, guest networks and more.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hardenwire.com/articles/secure-your-home-router.html">
+<meta property="og:site_name" content="Hardenwire">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Secure Your Home Router: 10 Settings to Change Today">
+<meta property="og:description" content="A practical 10-step checklist to secure your home Wi-Fi router: admin password, firmware updates, WPA3, WPS, remote access, guest networks and more.">
+<meta property="og:url" content="https://hardenwire.com/articles/secure-your-home-router.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hardenwire">
+<meta name="twitter:title" content="How to Secure Your Home Router: 10 Settings to Change Today">
+<meta name="twitter:description" content="A practical 10-step checklist to secure your home Wi-Fi router: admin password, firmware updates, WPA3, WPS, remote access, guest networks and more.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta name="theme-color" content="#0f1c2e">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500..800&family=Lora:wght@400..700&family=Inter:wght@400..700&display=swap">
+<style>html[data-font]{--f-display:'Playfair Display', Georgia, serif;--f-serif:'Lora', Georgia, serif;--f-sans:'Inter', system-ui, Arial, sans-serif}</style>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/article.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script>try{var t=localStorage.getItem('hw-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Secure Your Home Router: A 10-Step Checklist","description":"A practical 10-step checklist to secure your home Wi-Fi router: admin password, firmware updates, WPA3, WPS, remote access, guest networks and more.","image":["https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80"],"datePublished":"2026-09-15","dateModified":"2026-11-12","author":[{"@type":"Person","name":"Tomás Vidal","url":"https://hardenwire.com/authors/tomas-vidal.html","jobTitle":"Networks & Devices Editor"}],"publisher":{"@type":"Organization","@id":"https://hardenwire.com/#organization","name":"Hardenwire","url":"https://hardenwire.com","logo":{"@type":"ImageObject","url":"https://hardenwire.com/assets/icons/logo-512.svg","width":512,"height":512}},"mainEntityOfPage":"https://hardenwire.com/articles/secure-your-home-router.html","articleSection":"Network Security","keywords":"how to secure your home router, router security settings, change router admin password, should I disable WPS, wpa3 vs wpa2, guest network iot","wordCount":1266}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hardenwire.com/"},{"@type":"ListItem","position":2,"name":"Cybersecurity","item":"https://hardenwire.com/category/cybersecurity.html"},{"@type":"ListItem","position":3,"name":"Network Security","item":"https://hardenwire.com/category/network-security.html"},{"@type":"ListItem","position":4,"name":"Securing your router","item":"https://hardenwire.com/articles/secure-your-home-router.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I log in to my router?","acceptedAnswer":{"@type":"Answer","text":"Most routers are managed either through a phone app from the manufacturer or internet provider, or through a web page at an address such as 192.168.0.1, 192.168.1.1 or 10.0.0.1. The address and default login are usually printed on a sticker on the router itself. You need to be connected to its network to reach the admin page."}},{"@type":"Question","name":"Should I hide my Wi-Fi network name (SSID)?","acceptedAnswer":{"@type":"Answer","text":"It isn't worth it. Hidden networks are still easy to find with free tools, and hiding the name can make your devices broadcast it while searching, which is slightly worse for privacy when you're away from home. A strong passphrase and WPA3 or WPA2-AES do the real work."}},{"@type":"Question","name":"How often should I replace my router?","acceptedAnswer":{"@type":"Answer","text":"When the manufacturer stops issuing security updates for it. That's often five years or so after the model's release, but it varies widely. Check the support page for your model. A router without updates will accumulate known, unpatched vulnerabilities."}},{"@type":"Question","name":"Is the router from my internet provider secure?","acceptedAnswer":{"@type":"Answer","text":"Provider-supplied routers are often updated automatically by the provider, which is a real advantage. They may still ship with features like WPS or UPnP switched on, so go through this checklist anyway. Some settings may be locked or only available through the provider's app."}}]}</script>
+</head>
+<body class="page-article" data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="container site-header__inner">
+    <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><button class="primary-nav__btn js-mega" type="button" aria-expanded="false" aria-controls="mega-topics">Topics <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></li>
+        <li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../articles.html">Guides</a></li><li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <button class="theme-toggle js-theme" type="button" aria-label="Toggle dark mode"><svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15A8 8 0 1 1 9 4a6.5 6.5 0 0 0 11 11z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn js-search-open" type="button" aria-label="Search" aria-controls="search-panel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <a class="btn btn--ink btn--sm site-header__cta" href="../newsletter.html">Subscribe</a>
+      <button class="icon-btn menu-btn js-menu-open" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mega" id="mega-topics" hidden>
+  <div class="mega__inner container">
+    <div class="mega__col">
+      <a class="mega__hub" href="../category/cybersecurity.html">Cybersecurity <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Accounts, devices and networks: how attacks work and the defences that stop them.</p>
+      <ul><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/privacy.html">Privacy <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Who collects your data, what they do with it, and how to take back control.</p>
+      <ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/online-safety.html">Online Safety <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Scams, fraud and manipulation, and how to recognise them before they cost you.</p>
+      <ul><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul>
+    </div>
+    <div class="mega__col mega__col--aside">
+      <p class="mega__hub">Start here</p>
+      <ul>
+        <li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li>
+        <li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting a phishing email</a></li>
+        <li><a href="../articles/secure-your-home-router.html">Securing your router</a></li>
+      </ul>
+      <a class="btn btn--ghost btn--sm" href="../categories.html">All topics</a>
+    </div>
+  </div>
+</div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="container">
+      <form class="search-panel__form" action="../search.html" method="get" role="search">
+        <label class="sr-only" for="hdr-q">Search Hardenwire</label>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="hdr-q" name="q" type="search" placeholder="Search guides: phishing, passkeys, VPN…" autocomplete="off" class="js-live-search" aria-describedby="hdr-q-hint">
+        <button class="icon-btn js-search-close" type="button" aria-label="Close search"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </form>
+      <p id="hdr-q-hint" class="sr-only">Suggestions appear as you type. Press Enter for all results.</p>
+      <ul class="search-panel__results js-live-results" role="listbox" aria-label="Suggestions"></ul>
+      <p class="search-panel__popular">Popular: <a href="../search.html?q=phishing">phishing</a> <a href="../search.html?q=passkey">passkeys</a> <a href="../search.html?q=vpn">VPN</a> <a href="../search.html?q=router">router</a> <a href="../search.html?q=data%20breach">data breach</a></p>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-menu__head"><a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a><button class="icon-btn js-menu-close" type="button" aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <form class="mobile-menu__search" action="../search.html" method="get" role="search"><label class="sr-only" for="mm-q">Search</label><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="mm-q" name="q" type="search" placeholder="Search Hardenwire"></form>
+    <nav aria-label="Mobile">
+      <details class="mm-group"><summary>Cybersecurity <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/cybersecurity.html">All cybersecurity</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul></details><details class="mm-group"><summary>Privacy <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/privacy.html">All privacy</a></li><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></details><details class="mm-group"><summary>Online Safety <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/online-safety.html">All online safety</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul></details>
+      <ul class="mm-links">
+        <li><a href="../articles.html">All guides</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../authors.html">Authors</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--accent btn--block" href="../newsletter.html">Get the weekly Briefing</a>
+  </div>
+</div>
+<main id="main">
+
+<div class="progress" aria-hidden="true"><span class="js-progress"></span></div>
+<article class="article">
+  <header class="article-hero container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/network-security.html">Network Security</a></li><li aria-current="page">Securing your router</li></ol></nav>
+    <div class="article-hero__badges"><a class="badge badge--teal " href="../category/network-security.html">Network Security</a><span class="pill">Beginner friendly</span></div>
+    <h1 class="article-hero__title">How to Secure Your Home Router: A 10-Step Checklist</h1>
+    <p class="article-hero__dek">Your router is the front door for every device you own, and most have never been touched since installation. This checklist takes about 30 minutes and needs no technical background.</p>
+    <div class="byline">
+      <span class="avatar" style="--s:44px" aria-hidden="true">TV</span>
+      <div class="byline__who"><a class="byline__name" href="../authors/tomas-vidal.html">Tomás Vidal</a><span class="byline__role">Networks &amp; Devices Editor</span></div>
+      <dl class="byline__dates">
+        <div><dt>Published</dt><dd><time datetime="2026-09-15">Sep 15, 2026</time></dd></div>
+        <div><dt>Updated</dt><dd><time datetime="2026-11-12">Nov 12, 2026</time></dd></div>
+        <div><dt>Reading time</dt><dd>6 min</dd></div>
+      </dl>
+    </div>
+  </header>
+  <figure class="article-figure container container--wide">
+    <img class="article-figure__img" src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A white home Wi-Fi router standing on a white table" width="1200" height="675" fetchpriority="high" decoding="async">
+    <figcaption>The router sits between every device in your home and the internet. Photo: <a href="https://unsplash.com/@comparefibre?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">@comparefibre</a> on <a href="https://unsplash.com/?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">Unsplash</a></figcaption>
+  </figure>
+  <div class="article-layout container container--wide">
+    <aside class="article-layout__rail"><div class="share share--rail" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html&amp;text=How%20to%20Secure%20Your%20Home%20Router%3A%20A%2010-Step%20Checklist" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=How%20to%20Secure%20Your%20Home%20Router%3A%20A%2010-Step%20Checklist&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/secure-your-home-router.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div></aside>
+    <div class="article-main">
+      <details class="toc toc--inline"><summary><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> On this page</summary><ol><li><a href="#the-checklist">The checklist</a></li><li><a href="#which-of-these-matter-most">Which of these matter most?</a></li><li><a href="#things-that-sound-important-but-aren-t">Things that sound important but aren't</a></li><li><a href="#after-the-router-the-rest-of-the-home-network">After the router: the rest of the home network</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></details>
+      <aside class="takeaways" aria-labelledby="kt">
+        <h2 class="takeaways__title" id="kt">Key takeaways</h2>
+        <ul><li>Change the router's admin password first. Default credentials are publicly listed for nearly every model.</li><li>Turn on automatic firmware updates, or check monthly, and replace routers that no longer receive updates.</li><li>Use WPA3 (or WPA2-AES if older devices need it) with a long Wi-Fi passphrase, and switch off WPS.</li><li>Disable remote management, and move smart-home gadgets to a separate guest network.</li></ul>
+      </aside>
+      <div class="prose">
+<p>Your router decides which devices get onto your network and what reaches them from the internet. Laptops, phones, TVs, doorbells, baby monitors and the smart plug in the kitchen all trust it. Yet in most homes it's the one device nobody has opened since the engineer left.</p>
+
+<p>Attackers know this. Compromised home routers are routinely gathered into botnets, used to redirect traffic to fake websites, or used as a foothold to reach the devices behind them. The good news is that you don't need any networking knowledge to fix the common weaknesses. You need the login details on the sticker, half an hour, and this list.</p>
+
+<div class="callout callout--info"><p><strong>Before you start</strong>Find your router's admin page or app. The address (often <code>192.168.0.1</code>, <code>192.168.1.1</code> or <code>10.0.0.1</code>) and default login are usually printed on the router. Many internet providers now use an app instead. Settings are named differently by every manufacturer, so look for the closest match.</p></div>
+
+<h2 id="the-checklist">The checklist</h2>
+
+<ol class="steps">
+  <li><strong>Change the admin password.</strong> This is the password for the router's settings page, not your Wi-Fi password. Default admin credentials such as <em>admin/admin</em> or <em>admin/password</em> are published online for virtually every model. Replace it with a long, unique password and save it in your password manager. If your router lets you change the admin username too, do so.</li>
+  <li><strong>Update the firmware, and keep it updated.</strong> Firmware is the router's operating system, and security fixes arrive through it. Look for "Firmware update", "Router update" or "Administration". Turn on automatic updates if offered; otherwise put a monthly reminder in your calendar. If the manufacturer has stopped releasing updates for your model, plan to replace it. An unpatched router is the most common serious problem we see.</li>
+  <li><strong>Choose the right Wi-Fi security mode.</strong> In wireless settings, choose <strong>WPA3-Personal</strong> if all your devices support it, or <strong>WPA2/WPA3 mixed</strong> ("transition") mode if some older devices don't. If WPA3 isn't available, use <strong>WPA2-Personal with AES</strong>. Avoid anything labelled WEP, WPA (without the 2 or 3), or TKIP. These are broken.</li>
+  <li><strong>Set a strong Wi-Fi passphrase.</strong> Length beats complexity: four or five random words (<em>copper-lantern-orbit-mild</em>) are stronger and easier to type on a TV remote than a short jumble of symbols. Aim for at least 15 characters. Changing it means reconnecting every device, so do it once, properly.</li>
+  <li><strong>Turn off WPS.</strong> Wi-Fi Protected Setup lets devices join by pressing a button or entering an eight-digit PIN. The PIN method in particular has a long history of weaknesses, and few people use the feature. Switch it off.</li>
+  <li><strong>Disable remote management.</strong> Sometimes called "Remote administration", "Web access from WAN" or "Remote access". When it's on, the router's admin page can be reached from the internet. Unless you have a specific need, and your provider's app works without it, turn it off.</li>
+  <li><strong>Review UPnP.</strong> Universal Plug and Play lets devices on your network open ports to the internet automatically. Games consoles and some video-calling apps use it, but malware can too. If nothing you rely on breaks, turning it off reduces your exposure. If you game online, you may prefer to leave it on and keep everything else updated.</li>
+  <li><strong>Create a guest network for visitors and smart devices.</strong> Most routers can run a second, separate Wi-Fi network. Put visitors' phones and your smart-home gadgets (cameras, plugs, speakers, appliances) on it, and keep laptops and phones on the main network. If a cheap camera with poor security is compromised, it can't reach the computer where you do your banking. Make sure "allow guests to access the local network" is switched off.</li>
+  <li><strong>Check what's connected.</strong> Look for a "Connected devices", "Clients" or "Attached devices" list. Rename the devices you recognise. If something unexpected is there, change your Wi-Fi passphrase. Repeat this whenever you add a new gadget.</li>
+  <li><strong>Check the DNS settings, then leave them alone.</strong> DNS translates website names into addresses. Some router attacks quietly change the DNS server so that your traffic goes to look-alike sites. In the internet or WAN settings, the DNS should be set to "automatic" (your provider) or to a reputable service you chose deliberately, such as Cloudflare (1.1.1.1), Google (8.8.8.8) or Quad9 (9.9.9.9). If you see addresses you don't recognise and didn't set, reset the router and change the admin password.</li>
+</ol>
+
+<h2 id="which-of-these-matter-most">Which of these matter most?</h2>
+
+<p>If you only have ten minutes, do these four in this order:</p>
+
+<div class="table-wrap" tabindex="0"><table>
+  <thead><tr><th>Priority</th><th>Setting</th><th>Why it's urgent</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Admin password</td><td>Default credentials give anyone on your network full control of the router</td></tr>
+    <tr><td>2</td><td>Firmware updates</td><td>Most router takeovers exploit known, already-fixed flaws</td></tr>
+    <tr><td>3</td><td>Remote management off</td><td>Removes the admin page from the public internet</td></tr>
+    <tr><td>4</td><td>WPA3 / WPA2-AES + long passphrase</td><td>Stops neighbours and passers-by joining your network</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="things-that-sound-important-but-aren-t">Things that sound important but aren't</h2>
+
+<p><strong>Hiding your network name.</strong> A hidden SSID is still visible to anyone with basic tools, and it can make your devices advertise the name everywhere they go. It's not worth the hassle.</p>
+
+<p><strong>MAC address filtering.</strong> Allowing only listed devices sounds strict, but device identifiers are easy to copy, and modern phones randomise theirs by default. It adds work without adding much protection.</p>
+
+<p><strong>Changing the network name.</strong> Using a name that doesn't reveal your router brand or your surname is a minor privacy improvement, and it does no harm. It isn't a security control, though.</p>
+
+<div class="callout callout--warning"><p><strong>Watch for end-of-life routers</strong>Many people use a router for a decade. Look up your model on the manufacturer's support site. If it's listed as end-of-life or end-of-support, no more security fixes are coming, and replacing it is the single best upgrade for your home network.</p></div>
+
+<h2 id="after-the-router-the-rest-of-the-home-network">After the router: the rest of the home network</h2>
+
+<p>A well-configured router protects the perimeter, but each device still needs its own care. Keep phones, computers and smart gadgets updated, change default passwords on cameras and network storage, and remove devices you no longer use. If you'd like to know whether a compromised gadget might already be on your network, look for the signs in our guide to <a href="../articles/signs-your-phone-has-malware.html">detecting malware on a phone</a>. The principles carry over to other devices.</p>
+
+<p>Your home network is the one you control. Away from home you're using someone else's, which raises different questions. Our guide to <a href="../articles/public-wifi-safety.html">public Wi-Fi safety</a> covers what changes in a café or airport, and our <a href="../articles/do-you-need-a-vpn.html">VPN explainer</a> covers whether you need one.</p>
+
+      </div>
+      <section class="faq" aria-labelledby="faq"><h2 id="faq">Frequently asked questions</h2><details class="faq__item" open><summary><h3>How do I log in to my router?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>Most routers are managed either through a phone app from the manufacturer or internet provider, or through a web page at an address such as 192.168.0.1, 192.168.1.1 or 10.0.0.1. The address and default login are usually printed on a sticker on the router itself. You need to be connected to its network to reach the admin page.</p></div></details><details class="faq__item"><summary><h3>Should I hide my Wi-Fi network name (SSID)?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>It isn't worth it. Hidden networks are still easy to find with free tools, and hiding the name can make your devices broadcast it while searching, which is slightly worse for privacy when you're away from home. A strong passphrase and WPA3 or WPA2-AES do the real work.</p></div></details><details class="faq__item"><summary><h3>How often should I replace my router?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>When the manufacturer stops issuing security updates for it. That's often five years or so after the model's release, but it varies widely. Check the support page for your model. A router without updates will accumulate known, unpatched vulnerabilities.</p></div></details><details class="faq__item"><summary><h3>Is the router from my internet provider secure?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>Provider-supplied routers are often updated automatically by the provider, which is a real advantage. They may still ship with features like WPS or UPnP switched on, so go through this checklist anyway. Some settings may be locked or only available through the provider's app.</p></div></details></section>
+      <section class="sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://www.cisa.gov/news-events/news/home-network-security" rel="noopener" target="_blank">CISA: Home Network Security</a></li><li><a href="https://media.defense.gov/2023/Feb/22/2003165170/-1/-1/0/CSI_BEST_PRACTICES_FOR_SECURING_YOUR_HOME_NETWORK.PDF" rel="noopener" target="_blank">NSA: Best Practices for Securing Your Home Network (PDF)</a></li><li><a href="https://www.wi-fi.org/discover-wi-fi/security" rel="noopener" target="_blank">Wi-Fi Alliance: Security (WPA3)</a></li><li><a href="https://consumer.ftc.gov/articles/using-ip-cameras-safely" rel="noopener" target="_blank">FTC: Using IP cameras safely</a>. Guidance on securing connected devices at home</li></ol><p class="sources__note">Menu names and settings change between software versions. We review this guide regularly; see our <a href="../corrections-policy.html">corrections policy</a> if you spot something out of date.</p></section>
+      <div class="article-tags"><span>Topics:</span><a class="tag" href="../search.html?q=router%20security">router security</a><a class="tag" href="../search.html?q=Wi-Fi">Wi-Fi</a><a class="tag" href="../search.html?q=WPA3">WPA3</a><a class="tag" href="../search.html?q=home%20network">home network</a><a class="tag" href="../search.html?q=firmware">firmware</a><a class="tag" href="../search.html?q=smart%20home">smart home</a></div>
+      <div class="share share--inline" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html&amp;text=How%20to%20Secure%20Your%20Home%20Router%3A%20A%2010-Step%20Checklist" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=How%20to%20Secure%20Your%20Home%20Router%3A%20A%2010-Step%20Checklist&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Fsecure-your-home-router.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/secure-your-home-router.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div>
+      <aside class="author-box">
+        <span class="avatar" style="--s:64px" aria-hidden="true">TV</span>
+        <div><p class="kicker">Written by</p><h2 class="author-box__name"><a href="../authors/tomas-vidal.html">Tomás Vidal</a></h2><p class="author-box__role">Networks &amp; Devices Editor</p><p>Tomás covers home networks, Wi-Fi, routers and phones. He writes the guides you follow with the device in one hand, which means he spends a lot of time in router admin panels and settings menus that change with every update.</p></div>
+      </aside>
+      <p class="review-note"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/></svg><span>Reviewed under the Hardenwire <a href="../editorial-policy.html">editorial policy</a>. We don't accept payment for coverage, and this guide contains no affiliate links.</span></p>
+      <nav class="prevnext" aria-label="More articles">
+        <a class="prevnext__link prevnext__link--prev" href="../articles/how-to-spot-a-phishing-email.html"><span><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Previous</span><strong>How to Spot a Phishing Email: An Annotated Walkthrough</strong></a>
+        <a class="prevnext__link prevnext__link--next" href="../articles/what-to-do-after-a-data-breach.html"><span>Next <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Your Data Was in a Breach. Here's What to Do, Hour by Hour</strong></a>
+      </nav>
+    </div>
+    <aside class="article-layout__toc"><nav class="toc toc--rail js-toc" aria-label="On this page"><p class="toc__title">On this page</p><ol><li><a href="#the-checklist">The checklist</a></li><li><a href="#which-of-these-matter-most">Which of these matter most?</a></li><li><a href="#things-that-sound-important-but-aren-t">Things that sound important but aren't</a></li><li><a href="#after-the-router-the-rest-of-the-home-network">After the router: the rest of the home network</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></aside>
+  </div>
+</article>
+<section class="section section--tint">
+  <div class="container">
+    <header class="section-head"><h2 class="section-head__title">Keep reading</h2><a class="section-head__link" href="../category/network-security.html">More in Network Security <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></header>
+    <div class="grid grid--3"><article class="card card--default" data-cats="online-safety network-security vpn" data-tags="public Wi-Fi|Wi-Fi|travel security|evil twin|HTTPS|VPN" data-date="2026-10-20" data-updated="2026-10-20" data-pop="700" data-read="5">
+  <a class="card__media" href="../articles/public-wifi-safety.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A man working on a laptop with a coffee in a cafe" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--amber " href="../category/online-safety.html">Online Safety</a>
+    <h3 class="card__title"><a href="../articles/public-wifi-safety.html">Is Public Wi-Fi Safe? What the Real Risks Are Now</a></h3>
+    <p class="card__dek">The coffee-shop hacker stealing your bank password is mostly a story from an older internet. Public Wi-Fi still carries risks, though. They're just different from the ones you've been warned about.</p>
+    <p class="meta"><span class="meta__author">Tomás Vidal</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-10-20">Oct 20, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>5 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="vpn privacy network-security" data-tags="VPN|privacy|public Wi-Fi|ISP tracking|encryption|free VPN" data-date="2026-10-13" data-updated="2026-11-14" data-pop="880" data-read="5">
+  <a class="card__media" href="../articles/do-you-need-a-vpn.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="Blue ethernet network cables plugged into a switch" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--teal " href="../category/vpn.html">VPN</a>
+    <h3 class="card__title"><a href="../articles/do-you-need-a-vpn.html">Do You Actually Need a VPN? A Straight Answer</a></h3>
+    <p class="card__dek">VPN marketing promises anonymity and protection from hackers. The reality is narrower but still useful. Here's what a VPN changes about your connection, who genuinely benefits, and how to avoid the services that make things worse.</p>
+    <p class="meta"><span class="meta__author">Lena Marsh</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-14">Nov 14, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>5 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="phishing online-safety browser-security" data-tags="phishing|email security|scams|fake websites|social engineering" data-date="2026-09-08" data-updated="2026-11-04" data-pop="980" data-read="7">
+  <a class="card__media" href="../articles/how-to-spot-a-phishing-email.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="Close-up of the Mail app icon on a smartphone home screen" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--amber " href="../category/phishing.html">Phishing &amp; Scams</a>
+    <h3 class="card__title"><a href="../articles/how-to-spot-a-phishing-email.html">How to Spot a Phishing Email: An Annotated Walkthrough</a></h3>
+    <p class="card__dek">Phishing emails no longer give themselves away with bad spelling. We take a typical modern lure apart line by line, then give you a 30-second routine for any message that asks you to act.</p>
+    <p class="meta"><span class="meta__author">Priya Raman</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-04">Nov 4, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>7 min read</span></p>
+  </div>
+</article></div>
+  </div>
+</section>
+<div class="container section">
+<section class="newsletter newsletter--card" aria-labelledby="nl-art-title">
+  <div class="newsletter__inner">
+    <div class="newsletter__copy">
+      <p class="kicker">Free weekly newsletter</p>
+      <h2 class="newsletter__title" id="nl-art-title">Get guides like this every Thursday</h2>
+      <p>One email every Thursday: the scams going around, the settings worth changing, and one guide worth your time. No sponsors and no tracking pixels.</p>
+    </div>
+    <form class="newsletter__form js-subscribe" novalidate>
+      <label class="sr-only" for="nl-art-email">Email address</label>
+      <div class="field-row">
+        <input id="nl-art-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn btn--accent" type="submit">Subscribe</button>
+      </div>
+      <p class="form-note" role="status" aria-live="polite">Unsubscribe in one click. Read our <a href="../privacy-policy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</section></div>
+<div class="mobile-bar" aria-label="Article tools">
+  <button class="mobile-bar__btn js-toc-sheet" type="button"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> Contents</button>
+  <span class="mobile-bar__time"><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 6 min</span>
+  <button class="mobile-bar__btn js-native-share" type="button" data-title="How to Secure Your Home Router: A 10-Step Checklist" data-url="https://hardenwire.com/articles/secure-your-home-router.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg> Share</button>
+</div>
+<div class="sheet" id="toc-sheet" hidden><div class="sheet__panel" role="dialog" aria-modal="true" aria-label="Contents"><div class="sheet__head"><p class="toc__title">On this page</p><button class="icon-btn js-sheet-close" type="button" aria-label="Close contents"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><nav class="toc"><ol><li><a href="#the-checklist">The checklist</a></li><li><a href="#which-of-these-matter-most">Which of these matter most?</a></li><li><a href="#things-that-sound-important-but-aren-t">Things that sound important but aren't</a></li><li><a href="#after-the-router-the-rest-of-the-home-network">After the router: the rest of the home network</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></div></div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+        <p>Hardenwire is an independent publication covering cybersecurity, privacy and online safety, with practical guides and plain-English explainers you can act on.</p>
+        <a class="btn btn--outline-light btn--sm" href="../newsletter.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Subscribe to the Briefing</a>
+      </div>
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div><h2 class="site-footer__h">Topics</h2><ul><li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li><li><a href="../category/malware.html">Malware</a></li></ul></div>
+        <div><h2 class="site-footer__h">More topics</h2><ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></div>
+        <div><h2 class="site-footer__h">Popular guides</h2><ul><li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting phishing emails</a></li><li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li><li><a href="../articles/do-you-need-a-vpn.html">Do you need a VPN?</a></li><li><a href="../articles/what-to-do-after-a-data-breach.html">What to do after a data breach</a></li><li><a href="../articles/secure-your-home-router.html">Securing your router</a></li></ul></div>
+        <div><h2 class="site-footer__h">Publication</h2><ul>
+          <li><a href="../about.html">About</a></li><li><a href="../authors.html">Authors</a></li><li><a href="../editorial-policy.html">Editorial policy</a></li><li><a href="../corrections-policy.html">Corrections</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Hardenwire. Independent security &amp; privacy journalism.</p>
+      <ul><li><a href="../privacy-policy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../directory.html">Directory</a></li><li><a href="../sitemap.xml">Sitemap</a></li></ul>
+    </div>
+  </div>
+</footer>
+<script src="../js/articles-data.js" defer></script>
+<script src="../js/articles.js" defer></script>
+<script src="../js/main.js" defer></script>
+
+</body>
+</html>

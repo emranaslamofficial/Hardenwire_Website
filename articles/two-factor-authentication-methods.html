@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en" data-font="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Types of Two-Factor Authentication Ranked: SMS vs App vs Security Key | Hardenwire</title>
+<meta name="description" content="SMS codes, authenticator apps, push prompts, security keys and passkeys compared. Which two-factor method to choose, and why any 2FA beats none.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hardenwire.com/articles/two-factor-authentication-methods.html">
+<meta property="og:site_name" content="Hardenwire">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Types of Two-Factor Authentication Ranked: SMS vs App vs Security Key">
+<meta property="og:description" content="SMS codes, authenticator apps, push prompts, security keys and passkeys compared. Which two-factor method to choose, and why any 2FA beats none.">
+<meta property="og:url" content="https://hardenwire.com/articles/two-factor-authentication-methods.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hardenwire">
+<meta name="twitter:title" content="Types of Two-Factor Authentication Ranked: SMS vs App vs Security Key">
+<meta name="twitter:description" content="SMS codes, authenticator apps, push prompts, security keys and passkeys compared. Which two-factor method to choose, and why any 2FA beats none.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta name="theme-color" content="#0f1c2e">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500..800&family=Lora:wght@400..700&family=Inter:wght@400..700&display=swap">
+<style>html[data-font]{--f-display:'Playfair Display', Georgia, serif;--f-serif:'Lora', Georgia, serif;--f-sans:'Inter', system-ui, Arial, sans-serif}</style>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/article.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script>try{var t=localStorage.getItem('hw-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Two-Factor Authentication Methods, Ranked From Weakest to Strongest","description":"SMS codes, authenticator apps, push prompts, security keys and passkeys compared. Which two-factor method to choose, and why any 2FA beats none.","image":["https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&h=675&q=80"],"datePublished":"2026-10-06","dateModified":"2026-10-06","author":[{"@type":"Person","name":"Daniel Okafor","url":"https://hardenwire.com/authors/daniel-okafor.html","jobTitle":"Security Editor"}],"publisher":{"@type":"Organization","@id":"https://hardenwire.com/#organization","name":"Hardenwire","url":"https://hardenwire.com","logo":{"@type":"ImageObject","url":"https://hardenwire.com/assets/icons/logo-512.svg","width":512,"height":512}},"mainEntityOfPage":"https://hardenwire.com/articles/two-factor-authentication-methods.html","articleSection":"Password Security","keywords":"types of two factor authentication, sms 2fa vs authenticator app, is sms 2fa safe, best 2fa method, mfa fatigue","wordCount":1388}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hardenwire.com/"},{"@type":"ListItem","position":2,"name":"Cybersecurity","item":"https://hardenwire.com/category/cybersecurity.html"},{"@type":"ListItem","position":3,"name":"Password Security","item":"https://hardenwire.com/category/password-security.html"},{"@type":"ListItem","position":4,"name":"2FA methods, ranked","item":"https://hardenwire.com/articles/two-factor-authentication-methods.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is SMS two-factor authentication better than nothing?","acceptedAnswer":{"@type":"Answer","text":"Yes, clearly. A password alone can be guessed, reused or leaked in a breach. SMS adds a step most mass attacks can't complete. Its weaknesses (SIM swaps and phishing) matter most for high-value targets, so upgrade to an app, key or passkey on your email and financial accounts when you can."}},{"@type":"Question","name":"What happens if I lose the phone with my authenticator app?","acceptedAnswer":{"@type":"Answer","text":"That's what backup codes are for. Most services give you a set of single-use recovery codes when you turn on 2FA. Print them or store them in your password manager. Some authenticator apps also offer encrypted cloud backup or transfer to a new phone, which is worth enabling."}},{"@type":"Question","name":"What is MFA fatigue?","acceptedAnswer":{"@type":"Answer","text":"It's an attack where someone who already has your password triggers sign-in approval prompts on your phone again and again, hoping you'll tap Approve to make them stop. If you get a prompt you didn't trigger, deny it and change your password, because the attacker already knows it."}},{"@type":"Question","name":"Do I need a hardware security key?","acceptedAnswer":{"@type":"Answer","text":"Most people don't, especially if they use passkeys. Security keys are worth it for people at higher risk (journalists, activists, executives, administrators) or for anyone who wants the strongest protection on their email account. If you buy them, register at least two and keep one somewhere safe."}}]}</script>
+</head>
+<body class="page-article" data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="container site-header__inner">
+    <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><button class="primary-nav__btn js-mega" type="button" aria-expanded="false" aria-controls="mega-topics">Topics <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></li>
+        <li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../articles.html">Guides</a></li><li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <button class="theme-toggle js-theme" type="button" aria-label="Toggle dark mode"><svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15A8 8 0 1 1 9 4a6.5 6.5 0 0 0 11 11z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn js-search-open" type="button" aria-label="Search" aria-controls="search-panel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <a class="btn btn--ink btn--sm site-header__cta" href="../newsletter.html">Subscribe</a>
+      <button class="icon-btn menu-btn js-menu-open" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mega" id="mega-topics" hidden>
+  <div class="mega__inner container">
+    <div class="mega__col">
+      <a class="mega__hub" href="../category/cybersecurity.html">Cybersecurity <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Accounts, devices and networks: how attacks work and the defences that stop them.</p>
+      <ul><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/privacy.html">Privacy <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Who collects your data, what they do with it, and how to take back control.</p>
+      <ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/online-safety.html">Online Safety <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Scams, fraud and manipulation, and how to recognise them before they cost you.</p>
+      <ul><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul>
+    </div>
+    <div class="mega__col mega__col--aside">
+      <p class="mega__hub">Start here</p>
+      <ul>
+        <li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li>
+        <li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting a phishing email</a></li>
+        <li><a href="../articles/secure-your-home-router.html">Securing your router</a></li>
+      </ul>
+      <a class="btn btn--ghost btn--sm" href="../categories.html">All topics</a>
+    </div>
+  </div>
+</div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="container">
+      <form class="search-panel__form" action="../search.html" method="get" role="search">
+        <label class="sr-only" for="hdr-q">Search Hardenwire</label>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="hdr-q" name="q" type="search" placeholder="Search guides: phishing, passkeys, VPN…" autocomplete="off" class="js-live-search" aria-describedby="hdr-q-hint">
+        <button class="icon-btn js-search-close" type="button" aria-label="Close search"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </form>
+      <p id="hdr-q-hint" class="sr-only">Suggestions appear as you type. Press Enter for all results.</p>
+      <ul class="search-panel__results js-live-results" role="listbox" aria-label="Suggestions"></ul>
+      <p class="search-panel__popular">Popular: <a href="../search.html?q=phishing">phishing</a> <a href="../search.html?q=passkey">passkeys</a> <a href="../search.html?q=vpn">VPN</a> <a href="../search.html?q=router">router</a> <a href="../search.html?q=data%20breach">data breach</a></p>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-menu__head"><a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a><button class="icon-btn js-menu-close" type="button" aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <form class="mobile-menu__search" action="../search.html" method="get" role="search"><label class="sr-only" for="mm-q">Search</label><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="mm-q" name="q" type="search" placeholder="Search Hardenwire"></form>
+    <nav aria-label="Mobile">
+      <details class="mm-group"><summary>Cybersecurity <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/cybersecurity.html">All cybersecurity</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul></details><details class="mm-group"><summary>Privacy <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/privacy.html">All privacy</a></li><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></details><details class="mm-group"><summary>Online Safety <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/online-safety.html">All online safety</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul></details>
+      <ul class="mm-links">
+        <li><a href="../articles.html">All guides</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../authors.html">Authors</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--accent btn--block" href="../newsletter.html">Get the weekly Briefing</a>
+  </div>
+</div>
+<main id="main">
+
+<div class="progress" aria-hidden="true"><span class="js-progress"></span></div>
+<article class="article">
+  <header class="article-hero container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/password-security.html">Password Security</a></li><li aria-current="page">2FA methods, ranked</li></ol></nav>
+    <div class="article-hero__badges"><a class="badge badge--ink " href="../category/password-security.html">Password Security</a><span class="pill">Beginner friendly</span></div>
+    <h1 class="article-hero__title">Two-Factor Authentication Methods, Ranked From Weakest to Strongest</h1>
+    <p class="article-hero__dek">Any second factor is better than none, but they are not equal. We rank the common two-factor methods by how well they hold up against today's attacks, and explain how to choose for each account.</p>
+    <div class="byline">
+      <span class="avatar" style="--s:44px" aria-hidden="true">DO</span>
+      <div class="byline__who"><a class="byline__name" href="../authors/daniel-okafor.html">Daniel Okafor</a><span class="byline__role">Security Editor</span></div>
+      <dl class="byline__dates">
+        <div><dt>Published</dt><dd><time datetime="2026-10-06">Oct 6, 2026</time></dd></div>
+        
+        <div><dt>Reading time</dt><dd>6 min</dd></div>
+      </dl>
+    </div>
+  </header>
+  <figure class="article-figure container container--wide">
+    <img class="article-figure__img" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A person holding a smartphone in one hand while using it" width="1200" height="675" fetchpriority="high" decoding="async">
+    <figcaption>Each extra factor is another lock an attacker has to pick. Photo: <a href="https://unsplash.com/@freestocks?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">@freestocks</a> on <a href="https://unsplash.com/?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">Unsplash</a></figcaption>
+  </figure>
+  <div class="article-layout container container--wide">
+    <aside class="article-layout__rail"><div class="share share--rail" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html&amp;text=Two-Factor%20Authentication%20Methods%2C%20Ranked%20From%20Weakest%20to%20Strongest" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=Two-Factor%20Authentication%20Methods%2C%20Ranked%20From%20Weakest%20to%20Strongest&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/two-factor-authentication-methods.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div></aside>
+    <div class="article-main">
+      <details class="toc toc--inline"><summary><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> On this page</summary><ol><li><a href="#6-email-codes">6. Email codes</a></li><li><a href="#5-sms-text-message-codes">5. SMS text message codes</a></li><li><a href="#4-push-notification-prompts">4. Push notification prompts</a></li><li><a href="#3-authenticator-app-codes-totp">3. Authenticator app codes (TOTP)</a></li><li><a href="#2-hardware-security-keys">2. Hardware security keys</a></li><li><a href="#1-passkeys">1. Passkeys</a></li><li><a href="#the-ranking-at-a-glance">The ranking at a glance</a></li><li><a href="#what-to-set-up-account-by-account">What to set up, account by account</a></li><li><a href="#a-note-on-passwords">A note on passwords</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></details>
+      <aside class="takeaways" aria-labelledby="kt">
+        <h2 class="takeaways__title" id="kt">Key takeaways</h2>
+        <ul><li>Turning on any form of two-factor authentication blocks most opportunistic account takeovers. Don't let the perfect stop you from starting.</li><li>SMS codes are the weakest option because of SIM-swap fraud and phishing. Use them only where nothing better is offered.</li><li>Authenticator apps are a solid default. Push prompts with number matching are better than bare 'Approve?' prompts.</li><li>Security keys and passkeys are the only common methods that resist phishing outright.</li></ul>
+      </aside>
+      <div class="prose">
+<p>Two-factor authentication (2FA, also called multi-factor authentication or MFA) means a stolen password is no longer enough to get into your account. The attacker also needs something you <em>have</em> (your phone, a security key) or something you <em>are</em> (a fingerprint that unlocks a passkey). It's one of the few security measures with very little downside.</p>
+
+<p>The catch is that "turn on 2FA" covers very different technologies. A text message code and a hardware security key are both second factors, but they fail in completely different ways. Below, the common methods are ranked from weakest to strongest, with what each one protects against and where it breaks.</p>
+
+<div class="callout callout--info"><p><strong>Before you read the ranking</strong>Even the weakest method on this list is a large improvement on a password alone. If an account offers only SMS, turn on SMS. Then upgrade where better options exist.</p></div>
+
+<h2 id="6-email-codes">6. Email codes</h2>
+
+<p>Some services email a one-time code when you sign in from a new device. It stops someone who only has your password. But if your email account is the one being attacked, or shares a password with the account, it adds very little. Your email account itself should never rely on email codes.</p>
+
+<p><strong>Verdict:</strong> better than nothing for low-value accounts. Make sure the email account it depends on is locked down properly.</p>
+
+<h2 id="5-sms-text-message-codes">5. SMS text message codes</h2>
+
+<p>The most widely offered method and the most criticised. It fails in two main ways:</p>
+
+<ul>
+  <li><strong>SIM swapping.</strong> A criminal persuades or bribes a mobile carrier employee to move your number to a SIM card they control. Your texts, including your codes, then go to them. This is targeted fraud, but it happens often enough that NIST's authentication guidelines treat SMS as a "restricted" method that organisations should offer alternatives to.</li>
+  <li><strong>Real-time phishing.</strong> A fake login page asks for your password, and then for "the code we just sent you". The attacker types both into the real site within seconds. SMS offers no defence against this, and neither do the next two methods on the list.</li>
+</ul>
+
+<p><strong>Verdict:</strong> use it where it's the only option. Ask your carrier about a SIM lock, port-out PIN or "number lock" to make SIM swaps harder.</p>
+
+<h2 id="4-push-notification-prompts">4. Push notification prompts</h2>
+
+<p>You sign in, and your phone shows "Is this you trying to sign in?". You tap Approve. It's convenient, and it doesn't involve your phone number. The weakness is human: attackers who already have your password can trigger prompt after prompt until a tired or confused person taps Approve. This is called <em>MFA fatigue</em> or prompt bombing, and it has been used in high-profile corporate breaches.</p>
+
+<p>Better implementations use <strong>number matching</strong>: the sign-in screen shows a number that you type into the app. You can't do that unless you're actually looking at the sign-in screen, which defeats most prompt bombing.</p>
+
+<p><strong>Verdict:</strong> good when number matching or location details are shown. Never approve a prompt you didn't start. An unexpected prompt means your password is already known, so change it.</p>
+
+<h2 id="3-authenticator-app-codes-totp">3. Authenticator app codes (TOTP)</h2>
+
+<p>Apps such as Google Authenticator, Microsoft Authenticator, Authy, or the code generators built into password managers produce a new six-digit code every 30 seconds. The code is calculated on your device from a secret shared when you scanned the setup QR code. Nothing travels over the phone network, so SIM swapping is irrelevant.</p>
+
+<p>The remaining weakness is the same real-time phishing relay that defeats SMS: if you type an app code into a fake site, the attacker can use it immediately. App codes protect you very well against leaked and reused passwords, but not against a convincing fake page.</p>
+
+<p><strong>Verdict:</strong> the sensible default for most accounts that don't support passkeys. Turn on the app's backup or transfer feature so a lost phone doesn't lock you out.</p>
+
+<div class="callout callout--tip"><p><strong>Password manager or separate app?</strong>Keeping 2FA codes in the same password manager as your passwords is more convenient but puts both factors in one place. For most people with a strong master password and 2FA on the manager itself, it's a reasonable trade. For email and banking, consider a separate authenticator app.</p></div>
+
+<h2 id="2-hardware-security-keys">2. Hardware security keys</h2>
+
+<p>A small USB or NFC device, such as a YubiKey or Google Titan Key, that you tap or plug in to sign in. Keys built on the FIDO2/WebAuthn standard check the website's real domain before responding, so a phishing page simply gets no answer. This is the property security agencies call <strong>phishing resistance</strong>, and it is why CISA recommends phishing-resistant MFA as the gold standard.</p>
+
+<p>The downsides are practical. They cost money, you need at least two (one as a spare), and you have to carry one. Not every service supports them, though the important ones (Google, Microsoft, Apple, major password managers, many banks and social networks) do.</p>
+
+<p><strong>Verdict:</strong> the strongest option for people at elevated risk, and worth considering for anyone's primary email account.</p>
+
+<h2 id="1-passkeys">1. Passkeys</h2>
+
+<p>Passkeys use the same FIDO technology as security keys, but the key lives in your phone, computer or password manager and is unlocked with your fingerprint, face or PIN. You get phishing resistance without buying hardware, and in practice the sign-in is <em>faster</em> than typing a password and a code.</p>
+
+<p>Strictly speaking, a passkey isn't a second factor added to a password. It replaces both, combining something you have (the device) with something you are or know (biometric or PIN). Our full explainer covers <a href="../articles/passkeys-explained.html">how passkeys work and what happens if you lose your phone</a>.</p>
+
+<p><strong>Verdict:</strong> the best choice wherever it's offered.</p>
+
+<h2 id="the-ranking-at-a-glance">The ranking at a glance</h2>
+
+<div class="table-wrap" tabindex="0"><table>
+  <thead><tr><th>Method</th><th>Stops reused / leaked passwords</th><th>Stops SIM swap</th><th>Stops real-time phishing</th><th>Effort</th></tr></thead>
+  <tbody>
+    <tr><td>Passkey</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Lowest</td></tr>
+    <tr><td>Security key</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Medium</td></tr>
+    <tr><td>Authenticator app</td><td>Yes</td><td>Yes</td><td>No</td><td>Low</td></tr>
+    <tr><td>Push with number match</td><td>Yes</td><td>Yes</td><td>Partly</td><td>Low</td></tr>
+    <tr><td>SMS code</td><td>Yes</td><td>No</td><td>No</td><td>Low</td></tr>
+    <tr><td>Email code</td><td>Partly</td><td>n/a</td><td>No</td><td>Low</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="what-to-set-up-account-by-account">What to set up, account by account</h2>
+
+<p>You don't need the strongest method everywhere. Spend your effort where the damage would be greatest:</p>
+
+<ol class="steps">
+  <li><strong>Email account:</strong> passkey or security key, with an authenticator app as backup. This account can reset everything else.</li>
+  <li><strong>Apple, Google or Microsoft account and your password manager:</strong> passkey plus strong recovery options. These hold your other credentials.</li>
+  <li><strong>Banking and payment apps:</strong> the strongest method the bank offers. Often that's an in-app approval, which is fine.</li>
+  <li><strong>Social media and shopping:</strong> authenticator app or passkey.</li>
+  <li><strong>Everything else:</strong> whatever is offered. SMS is acceptable here.</li>
+</ol>
+
+<p>Whatever you choose, save the <strong>backup codes</strong>. Lockouts from lost phones are far more common than sophisticated attacks, and a printed sheet of recovery codes in a drawer solves most of them.</p>
+
+<h2 id="a-note-on-passwords">A note on passwords</h2>
+
+<p>2FA doesn't make your password irrelevant. Current NIST guidance favours <em>length</em> over complexity rules and recommends against forced periodic changes. A long, unique passphrase stored in a password manager is the right foundation, and 2FA sits on top. If your details have already appeared in a breach, follow our <a href="../articles/what-to-do-after-a-data-breach.html">data breach checklist</a>, which covers resetting passwords and adding 2FA in the right order.</p>
+
+      </div>
+      <section class="faq" aria-labelledby="faq"><h2 id="faq">Frequently asked questions</h2><details class="faq__item" open><summary><h3>Is SMS two-factor authentication better than nothing?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>Yes, clearly. A password alone can be guessed, reused or leaked in a breach. SMS adds a step most mass attacks can't complete. Its weaknesses (SIM swaps and phishing) matter most for high-value targets, so upgrade to an app, key or passkey on your email and financial accounts when you can.</p></div></details><details class="faq__item"><summary><h3>What happens if I lose the phone with my authenticator app?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>That's what backup codes are for. Most services give you a set of single-use recovery codes when you turn on 2FA. Print them or store them in your password manager. Some authenticator apps also offer encrypted cloud backup or transfer to a new phone, which is worth enabling.</p></div></details><details class="faq__item"><summary><h3>What is MFA fatigue?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>It's an attack where someone who already has your password triggers sign-in approval prompts on your phone again and again, hoping you'll tap Approve to make them stop. If you get a prompt you didn't trigger, deny it and change your password, because the attacker already knows it.</p></div></details><details class="faq__item"><summary><h3>Do I need a hardware security key?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>Most people don't, especially if they use passkeys. Security keys are worth it for people at higher risk (journalists, activists, executives, administrators) or for anyone who wants the strongest protection on their email account. If you buy them, register at least two and keep one somewhere safe.</p></div></details></section>
+      <section class="sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://www.cisa.gov/mfa" rel="noopener" target="_blank">CISA: More than a password</a></li><li><a href="https://pages.nist.gov/800-63-4/sp800-63b.html" rel="noopener" target="_blank">NIST SP 800-63B: Authentication and lifecycle management</a>. Classifies SMS/PSTN as a restricted authenticator</li><li><a href="https://2fa.directory/" rel="noopener" target="_blank">2FA Directory: which sites support which methods</a></li><li><a href="https://fidoalliance.org/passkeys/" rel="noopener" target="_blank">FIDO Alliance: Passkeys</a></li></ol><p class="sources__note">Menu names and settings change between software versions. We review this guide regularly; see our <a href="../corrections-policy.html">corrections policy</a> if you spot something out of date.</p></section>
+      <div class="article-tags"><span>Topics:</span><a class="tag" href="../search.html?q=two-factor%20authentication">two-factor authentication</a><a class="tag" href="../search.html?q=2FA">2FA</a><a class="tag" href="../search.html?q=MFA">MFA</a><a class="tag" href="../search.html?q=authenticator%20app">authenticator app</a><a class="tag" href="../search.html?q=security%20keys">security keys</a><a class="tag" href="../search.html?q=SIM%20swap">SIM swap</a></div>
+      <div class="share share--inline" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html&amp;text=Two-Factor%20Authentication%20Methods%2C%20Ranked%20From%20Weakest%20to%20Strongest" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=Two-Factor%20Authentication%20Methods%2C%20Ranked%20From%20Weakest%20to%20Strongest&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Ftwo-factor-authentication-methods.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/two-factor-authentication-methods.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div>
+      <aside class="author-box">
+        <span class="avatar" style="--s:64px" aria-hidden="true">DO</span>
+        <div><p class="kicker">Written by</p><h2 class="author-box__name"><a href="../authors/daniel-okafor.html">Daniel Okafor</a></h2><p class="author-box__role">Security Editor</p><p>Daniel edits Hardenwire’s account- and device-security coverage. He writes about authentication, malware and what to do in the hours after something goes wrong, and he tests every step-by-step guide on real hardware before it is published.</p></div>
+      </aside>
+      <p class="review-note"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/></svg><span>Reviewed under the Hardenwire <a href="../editorial-policy.html">editorial policy</a>. We don't accept payment for coverage, and this guide contains no affiliate links.</span></p>
+      <nav class="prevnext" aria-label="More articles">
+        <a class="prevnext__link prevnext__link--prev" href="../articles/ransomware-home-users.html"><span><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Previous</span><strong>Ransomware at Home: How It Gets In and the Backup Plan That Beats It</strong></a>
+        <a class="prevnext__link prevnext__link--next" href="../articles/do-you-need-a-vpn.html"><span>Next <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Do You Actually Need a VPN? A Straight Answer</strong></a>
+      </nav>
+    </div>
+    <aside class="article-layout__toc"><nav class="toc toc--rail js-toc" aria-label="On this page"><p class="toc__title">On this page</p><ol><li><a href="#6-email-codes">6. Email codes</a></li><li><a href="#5-sms-text-message-codes">5. SMS text message codes</a></li><li><a href="#4-push-notification-prompts">4. Push notification prompts</a></li><li><a href="#3-authenticator-app-codes-totp">3. Authenticator app codes (TOTP)</a></li><li><a href="#2-hardware-security-keys">2. Hardware security keys</a></li><li><a href="#1-passkeys">1. Passkeys</a></li><li><a href="#the-ranking-at-a-glance">The ranking at a glance</a></li><li><a href="#what-to-set-up-account-by-account">What to set up, account by account</a></li><li><a href="#a-note-on-passwords">A note on passwords</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></aside>
+  </div>
+</article>
+<section class="section section--tint">
+  <div class="container">
+    <header class="section-head"><h2 class="section-head__title">Keep reading</h2><a class="section-head__link" href="../category/password-security.html">More in Password Security <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></header>
+    <div class="grid grid--3"><article class="card card--default" data-cats="password-security identity-protection mobile-security" data-tags="passkeys|passwords|authentication|FIDO2|account security" data-date="2026-11-10" data-updated="2026-11-16" data-pop="940" data-read="7">
+  <a class="card__media" href="../articles/passkeys-explained.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1585079374502-415f8516dcc3?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1585079374502-415f8516dcc3?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1585079374502-415f8516dcc3?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1585079374502-415f8516dcc3?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1585079374502-415f8516dcc3?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A fingerprint glowing on a dark circular biometric scanner" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--ink " href="../category/password-security.html">Password Security</a>
+    <h3 class="card__title"><a href="../articles/passkeys-explained.html">Passkeys Explained: How They Work and Whether You Should Switch</a></h3>
+    <p class="card__dek">Passkeys let you sign in with your face, fingerprint or device PIN instead of a password, and they can't be typed into a fake website. Here's how they work, where the rough edges are, and when switching makes sense.</p>
+    <p class="meta"><span class="meta__author">Daniel Okafor</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-16">Nov 16, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>7 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="identity-protection data-privacy password-security" data-tags="data breach|identity theft|credit freeze|Have I Been Pwned|passwords|fraud alert" data-date="2026-09-22" data-updated="2026-11-08" data-pop="860" data-read="6">
+  <a class="card__media" href="../articles/what-to-do-after-a-data-breach.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A person holding a payment card while using a laptop" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--rust " href="../category/identity-protection.html">Identity Protection</a>
+    <h3 class="card__title"><a href="../articles/what-to-do-after-a-data-breach.html">Your Data Was in a Breach. Here's What to Do, Hour by Hour</a></h3>
+    <p class="card__dek">A breach notice tells you something went wrong somewhere else. What you do next decides whether it becomes your problem. This timeline puts the steps in the order that matters.</p>
+    <p class="meta"><span class="meta__author">Daniel Okafor</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-08">Nov 8, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>6 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="mobile-security malware" data-tags="phone malware|spyware|Android|iPhone|app permissions|stalkerware" data-date="2026-11-03" data-updated="2026-11-03" data-pop="790" data-read="6">
+  <a class="card__media" href="../articles/signs-your-phone-has-malware.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A smartphone showing its home screen of apps" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--ink " href="../category/mobile-security.html">Mobile Security</a>
+    <h3 class="card__title"><a href="../articles/signs-your-phone-has-malware.html">Is Your Phone Infected? Signs of Malware and What to Check First</a></h3>
+    <p class="card__dek">A hot battery or a strange pop-up doesn't mean you've been hacked, but sometimes it does. This guide separates the symptoms that point to malware from the ones that usually have a boring explanation, then walks through the checks.</p>
+    <p class="meta"><span class="meta__author">Tomás Vidal</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-03">Nov 3, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>6 min read</span></p>
+  </div>
+</article></div>
+  </div>
+</section>
+<div class="container section">
+<section class="newsletter newsletter--card" aria-labelledby="nl-art-title">
+  <div class="newsletter__inner">
+    <div class="newsletter__copy">
+      <p class="kicker">Free weekly newsletter</p>
+      <h2 class="newsletter__title" id="nl-art-title">Get guides like this every Thursday</h2>
+      <p>One email every Thursday: the scams going around, the settings worth changing, and one guide worth your time. No sponsors and no tracking pixels.</p>
+    </div>
+    <form class="newsletter__form js-subscribe" novalidate>
+      <label class="sr-only" for="nl-art-email">Email address</label>
+      <div class="field-row">
+        <input id="nl-art-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn btn--accent" type="submit">Subscribe</button>
+      </div>
+      <p class="form-note" role="status" aria-live="polite">Unsubscribe in one click. Read our <a href="../privacy-policy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</section></div>
+<div class="mobile-bar" aria-label="Article tools">
+  <button class="mobile-bar__btn js-toc-sheet" type="button"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> Contents</button>
+  <span class="mobile-bar__time"><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 6 min</span>
+  <button class="mobile-bar__btn js-native-share" type="button" data-title="Two-Factor Authentication Methods, Ranked From Weakest to Strongest" data-url="https://hardenwire.com/articles/two-factor-authentication-methods.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg> Share</button>
+</div>
+<div class="sheet" id="toc-sheet" hidden><div class="sheet__panel" role="dialog" aria-modal="true" aria-label="Contents"><div class="sheet__head"><p class="toc__title">On this page</p><button class="icon-btn js-sheet-close" type="button" aria-label="Close contents"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><nav class="toc"><ol><li><a href="#6-email-codes">6. Email codes</a></li><li><a href="#5-sms-text-message-codes">5. SMS text message codes</a></li><li><a href="#4-push-notification-prompts">4. Push notification prompts</a></li><li><a href="#3-authenticator-app-codes-totp">3. Authenticator app codes (TOTP)</a></li><li><a href="#2-hardware-security-keys">2. Hardware security keys</a></li><li><a href="#1-passkeys">1. Passkeys</a></li><li><a href="#the-ranking-at-a-glance">The ranking at a glance</a></li><li><a href="#what-to-set-up-account-by-account">What to set up, account by account</a></li><li><a href="#a-note-on-passwords">A note on passwords</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></div></div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+        <p>Hardenwire is an independent publication covering cybersecurity, privacy and online safety, with practical guides and plain-English explainers you can act on.</p>
+        <a class="btn btn--outline-light btn--sm" href="../newsletter.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Subscribe to the Briefing</a>
+      </div>
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div><h2 class="site-footer__h">Topics</h2><ul><li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li><li><a href="../category/malware.html">Malware</a></li></ul></div>
+        <div><h2 class="site-footer__h">More topics</h2><ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></div>
+        <div><h2 class="site-footer__h">Popular guides</h2><ul><li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting phishing emails</a></li><li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li><li><a href="../articles/do-you-need-a-vpn.html">Do you need a VPN?</a></li><li><a href="../articles/what-to-do-after-a-data-breach.html">What to do after a data breach</a></li><li><a href="../articles/secure-your-home-router.html">Securing your router</a></li></ul></div>
+        <div><h2 class="site-footer__h">Publication</h2><ul>
+          <li><a href="../about.html">About</a></li><li><a href="../authors.html">Authors</a></li><li><a href="../editorial-policy.html">Editorial policy</a></li><li><a href="../corrections-policy.html">Corrections</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Hardenwire. Independent security &amp; privacy journalism.</p>
+      <ul><li><a href="../privacy-policy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../directory.html">Directory</a></li><li><a href="../sitemap.xml">Sitemap</a></li></ul>
+    </div>
+  </div>
+</footer>
+<script src="../js/articles-data.js" defer></script>
+<script src="../js/articles.js" defer></script>
+<script src="../js/main.js" defer></script>
+
+</body>
+</html>

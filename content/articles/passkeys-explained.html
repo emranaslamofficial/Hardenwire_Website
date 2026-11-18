@@ -1,0 +1,193 @@
+---json
+{
+  "slug": "passkeys-explained",
+  "title": "Passkeys Explained: How They Work and Whether You Should Switch",
+  "shortTitle": "Passkeys, explained",
+  "seoTitle": "What Is a Passkey? How Passkeys Work and Should You Use Them",
+  "description": "A plain-English guide to passkeys: how they replace passwords, why they resist phishing, what happens if you lose your phone, and how to set up your first one.",
+  "dek": "Passkeys let you sign in with your face, fingerprint or device PIN instead of a password, and they can't be typed into a fake website. Here's how they work, where the rough edges are, and when switching makes sense.",
+  "stepBlurb": "Replace the passwords on your most important accounts with something that can't be phished.",
+  "category": "password-security",
+  "also": [
+    "identity-protection",
+    "mobile-security"
+  ],
+  "tags": [
+    "passkeys",
+    "passwords",
+    "authentication",
+    "FIDO2",
+    "account security"
+  ],
+  "primaryKeyword": "what is a passkey",
+  "secondaryKeywords": [
+    "passkey vs password",
+    "are passkeys safe",
+    "how do passkeys work",
+    "passkey lost phone"
+  ],
+  "author": "daniel-okafor",
+  "published": "2026-11-10",
+  "updated": "2026-11-16",
+  "featured": true,
+  "beginner": true,
+  "popularity": 940,
+  "motif": "key",
+  "imageAlt": "A fingerprint glowing on a dark circular biometric scanner",
+  "imageCaption": "Passkeys pair a key stored on your device with a check that only you can pass",
+  "takeaways": [
+    "A passkey is a pair of cryptographic keys. The private half never leaves your device or password manager, and the website only stores the public half.",
+    "Passkeys only work on the real website they were created for, so a convincing fake login page has nothing to steal.",
+    "Synced passkeys (iCloud Keychain, Google Password Manager, most password managers) survive a lost or replaced phone.",
+    "Start with your email account. Whoever controls your email can reset almost everything else."
+  ],
+  "faq": [
+    {
+      "q": "Are passkeys safer than passwords with two-factor authentication?",
+      "a": "Generally, yes. Codes from SMS or authenticator apps can be typed into a fake site and relayed to the real one in real time. A passkey is tied to the genuine website's domain, so that kind of relay attack fails. Passkeys are classed as phishing-resistant authentication, alongside hardware security keys."
+    },
+    {
+      "q": "Can someone use my passkey if they steal my phone?",
+      "a": "Not without also unlocking it. Using a passkey requires your biometric or device PIN. That's why a strong phone passcode matters: a six-digit or longer PIN, or an alphanumeric passcode, is better than four digits."
+    },
+    {
+      "q": "Does the website get my fingerprint or face data?",
+      "a": "No. Your fingerprint or face is checked locally by your device to unlock the passkey. The website only receives a cryptographic signature proving you hold the right key."
+    },
+    {
+      "q": "Can I use a passkey on a computer that isn't mine?",
+      "a": "Usually, yes. Choose the option to use a passkey from another device. The computer shows a QR code that you scan with your phone, and your phone completes the sign-in over a short-range Bluetooth check. No passkey is left on the borrowed computer."
+    }
+  ],
+  "sources": [
+    {
+      "name": "FIDO Alliance: Passkeys",
+      "url": "https://fidoalliance.org/passkeys/",
+      "note": "Industry body that maintains the passkey standards"
+    },
+    {
+      "name": "NIST SP 800-63B: Digital Identity Guidelines, Authentication",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
+    },
+    {
+      "name": "CISA: More than a password (multi-factor authentication)",
+      "url": "https://www.cisa.gov/mfa"
+    },
+    {
+      "name": "Apple Developer: Passkeys",
+      "url": "https://developer.apple.com/passkeys/"
+    },
+    {
+      "name": "Google for Developers: Passkeys",
+      "url": "https://developers.google.com/identity/passkeys"
+    }
+  ],
+  "photo": "photo-1585079374502-415f8516dcc3",
+  "photoCredit": "georgeprentzas"
+}
+---
+<p>Think about the last time you typed a password. You probably had to remember it or find it in a password manager. Then you may have been asked for a six-digit code from a text message, and on a bad day you had to reset the whole thing. Passkeys remove most of those steps. You choose the account, your phone or laptop asks for your fingerprint, face or PIN, and you're in.</p>
+
+<p>The convenience is the visible part. The more important change is something you can't see: there's no longer a secret you could be tricked into typing somewhere else. That is why security teams, government agencies and the large platforms have been pushing passkeys, and why it's worth understanding them before you turn them on.</p>
+
+<h2>What a passkey actually is</h2>
+
+<p>A passkey is a pair of mathematically linked keys created when you register with a website or app. It uses <em>public-key cryptography</em>, the same technology that secures HTTPS connections.</p>
+
+<ul>
+  <li>The <strong>private key</strong> stays with you, stored in your phone, computer, or password manager. It is never sent to the website.</li>
+  <li>The <strong>public key</strong> goes to the website. It can check a signature made by your private key, but it can't be used to sign in, so a leak of it does no harm.</li>
+</ul>
+
+<p>Compare that with a password, where the website has to hold something that can be used to verify the exact secret you know. When a company with a password database is breached, attackers start trying to crack it. When a company that stores only passkey public keys is breached, the attackers get nothing they can use to sign in as you.</p>
+
+<h2>What happens when you sign in</h2>
+
+<p>The exchange takes a second or two, but here is what's happening:</p>
+
+<ol class="steps">
+  <li><strong>The site sends a challenge.</strong> A random, one-time value along with the site's identity (its domain, such as <code>accounts.example.com</code>).</li>
+  <li><strong>Your device checks it's really you.</strong> It asks for your fingerprint, face or device PIN. This unlocks the private key locally. Your biometric data never leaves the device.</li>
+  <li><strong>Your device signs the challenge.</strong> It uses the private key that matches that specific domain.</li>
+  <li><strong>The site verifies the signature</strong> using your public key. If it checks out, you're signed in.</li>
+</ol>
+
+<p>The challenge is different every time, so a recorded sign-in can't be replayed later. No secret is ever sent, so there's nothing to intercept.</p>
+
+<h2>Why a fake login page can't steal a passkey</h2>
+
+<p>This is the feature that matters most. Most account takeovers start with phishing: a message pushes you to a page that looks exactly like your bank or email provider, and you type your password. A well-built phishing kit will also ask for your two-factor code and pass both to the real site in real time. We walk through how those lures look in our guide to <a href="{{a:how-to-spot-a-phishing-email}}">spotting phishing emails</a>.</p>
+
+<p>Passkeys break this at the root. Your device only offers a passkey to the domain that created it, and it checks that domain itself, without relying on your eyes. A page at <code>examp1e-login.example</code> can copy every pixel of the real site, but your phone simply won't have a passkey for it. There is nothing for you to get wrong.</p>
+
+<div class="callout callout--info"><p><strong>Why this matters</strong>Security agencies call this property <em>phishing resistance</em>. CISA's guidance on multi-factor authentication puts phishing-resistant methods (FIDO security keys and passkeys) at the top, above app-based and SMS codes.</p></div>
+
+<h2>Passkeys compared with what you use now</h2>
+
+<table>
+  <thead><tr><th>Method</th><th>What you do</th><th>Can be phished?</th><th>Damaged by a site breach?</th></tr></thead>
+  <tbody>
+    <tr><td>Password only</td><td>Remember or store a secret</td><td>Yes, easily</td><td>Yes, especially if reused</td></tr>
+    <tr><td>Password + SMS code</td><td>Password, then a texted code</td><td>Yes, via real-time relay or SIM swap</td><td>Partly</td></tr>
+    <tr><td>Password + authenticator app</td><td>Password, then an app code</td><td>Yes, via real-time relay</td><td>Partly</td></tr>
+    <tr><td>Passkey</td><td>Fingerprint, face or PIN</td><td>No, because it's bound to the real domain</td><td>No usable secret is stored</td></tr>
+  </tbody>
+</table>
+
+<p>For a closer look at the middle rows, our ranking of <a href="{{a:two-factor-authentication-methods}}">two-factor authentication methods</a> explains why app codes beat SMS, and why both fall short of passkeys.</p>
+
+<h2>Where your passkeys are stored</h2>
+
+<p>There are two kinds, and the difference affects what happens when you change devices.</p>
+
+<h3>Synced passkeys</h3>
+<p>Most people will use these. They are saved in a credential manager that backs them up, with end-to-end encryption, and syncs them across your devices. Apple's iCloud Keychain, Google Password Manager and Microsoft's own sync all do this, as do major third-party password managers such as 1Password and Bitwarden. Create a passkey on your phone and it appears on your laptop.</p>
+
+<h3>Device-bound passkeys</h3>
+<p>These live on one piece of hardware, usually a physical security key such as a YubiKey, and can't be copied off it. They offer the highest assurance, which is why they suit journalists, executives and anyone likely to be targeted directly. The trade-off is that losing the key means losing that passkey, so you register at least two.</p>
+
+<h2>"What if I lose my phone?"</h2>
+
+<p>This is the most common worry, and for synced passkeys the answer is reassuring. Your passkeys are tied to your Apple, Google or password-manager account, not to the handset. Sign in to that account on a replacement device and they come back.</p>
+
+<p>That moves the weak point to the account that holds the passkeys. Make sure it is well protected:</p>
+
+<ul class="checks">
+  <li>Use a long, unique password and two-factor authentication on your Apple Account, Google account or password manager.</li>
+  <li>Set up the recovery options that service offers, such as a recovery contact, recovery key or backup codes, and store them somewhere offline.</li>
+  <li>Keep at least one other way into your most important accounts, such as a second device or a hardware key.</li>
+</ul>
+
+<div class="callout callout--warning"><p><strong>Watch the fallback</strong>Many sites still let you sign in with a password even after you add a passkey. That's convenient, but a phisher can still target the password. Where a site lets you remove the password or require the passkey, consider doing so once you're comfortable.</p></div>
+
+<h2>Setting up your first passkey</h2>
+
+<p>The exact wording varies, but the path is similar on most services. Start with your primary email account: whoever controls it can reset nearly everything else.</p>
+
+<ol class="steps">
+  <li><strong>Open the account's security settings.</strong> Look for "Sign-in &amp; security", "Passkeys" or "Login options".</li>
+  <li><strong>Choose "Create a passkey".</strong> Some sites prompt you automatically after a normal sign-in.</li>
+  <li><strong>Approve with your device.</strong> Use your fingerprint, face or PIN when your phone or computer asks. If you use a third-party password manager, it may offer to save the passkey instead of the system manager. Pick one place and stay consistent.</li>
+  <li><strong>Sign out and test it.</strong> Sign back in using the passkey before you rely on it.</li>
+  <li><strong>Repeat for your next most important accounts:</strong> your Apple or Google account, your password manager, banking and shopping sites, and social media.</li>
+</ol>
+
+<p>The community-maintained <a href="https://passkeys.directory/" rel="noopener" target="_blank">passkeys.directory</a> lists which services support them.</p>
+
+<h2>The honest drawbacks</h2>
+
+<p>Passkeys are a real improvement, but they aren't finished.</p>
+
+<p><strong>Moving between ecosystems can be clunky.</strong> If your passkeys live in iCloud Keychain and you switch to Android, you'll need to set up new ones or move to a cross-platform password manager. The standards bodies have published an exchange format to make transfers easier, but support is still rolling out.</p>
+
+<p><strong>Account recovery is still the weak spot.</strong> A passkey can't be phished, but a support desk can sometimes be talked into resetting an account. Passkeys don't fix that, which is why your recovery settings matter.</p>
+
+<p><strong>Shared accounts are awkward.</strong> Passkeys are built around individuals. Some password managers let you share them with family members; system managers are more limited.</p>
+
+<p><strong>A device that is already compromised is still a problem.</strong> If malware controls your logged-in browser, it can steal the session after you've signed in. Our guide to <a href="{{a:signs-your-phone-has-malware}}">spotting malware on a phone</a> covers the warning signs.</p>
+
+<h2>Should you switch?</h2>
+
+<p>For your important accounts, yes, and the sooner the better. Passkeys remove the single most common route to account takeover, and on most phones they're also faster than typing a password. You don't need to convert everything this weekend. Start with email, then your password manager or platform account, then your money. Each one you switch is an account that a phishing page can no longer take from you.</p>
+
+<p>If your data has already turned up in a breach, read our step-by-step guide on <a href="{{a:what-to-do-after-a-data-breach}}">what to do after a data breach</a> first. It covers the order in which to secure things.</p>

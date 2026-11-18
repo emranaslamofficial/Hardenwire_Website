@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="A hard disk drive used for backups, close up">
+  <rect width="1200" height="675" fill="#f6eff0"/>
+  <path d="M120 590 H1080" stroke="#e6d6d9" stroke-width="2"/>
+  <g transform="translate(600 345) scale(.82) translate(-850 -340)">
+    <path d="M660 140 h200 l70 70 v300 h-270 z" fill="#ffffff" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M860 140 v70 h70" fill="none" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M700 260 h150 M700 300 h180 M700 340 h120" stroke="#bba5a9" stroke-width="8" stroke-linecap="round"/>
+    <rect x="890" y="330" width="170" height="150" rx="18" fill="#c8102e"/>
+    <path d="M925 330 v-40 c0-70 100-70 100 0 v40" fill="none" stroke="#14181f" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="975" cy="395" r="14" fill="#ffffff"/><path d="M975 405 v30" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/></g>
+</svg>

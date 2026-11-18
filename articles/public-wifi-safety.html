@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" data-font="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is Public Wi-Fi Safe? Real Risks, Myths and How to Stay Safe | Hardenwire</title>
+<meta name="description" content="Is public Wi-Fi safe to use? What has changed since HTTPS became standard, the risks that remain (evil twins, fake portals) and simple habits to stay safe.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hardenwire.com/articles/public-wifi-safety.html">
+<meta property="og:site_name" content="Hardenwire">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Is Public Wi-Fi Safe? Real Risks, Myths and How to Stay Safe">
+<meta property="og:description" content="Is public Wi-Fi safe to use? What has changed since HTTPS became standard, the risks that remain (evil twins, fake portals) and simple habits to stay safe.">
+<meta property="og:url" content="https://hardenwire.com/articles/public-wifi-safety.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hardenwire">
+<meta name="twitter:title" content="Is Public Wi-Fi Safe? Real Risks, Myths and How to Stay Safe">
+<meta name="twitter:description" content="Is public Wi-Fi safe to use? What has changed since HTTPS became standard, the risks that remain (evil twins, fake portals) and simple habits to stay safe.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta name="theme-color" content="#0f1c2e">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500..800&family=Lora:wght@400..700&family=Inter:wght@400..700&display=swap">
+<style>html[data-font]{--f-display:'Playfair Display', Georgia, serif;--f-serif:'Lora', Georgia, serif;--f-sans:'Inter', system-ui, Arial, sans-serif}</style>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/article.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script>try{var t=localStorage.getItem('hw-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Is Public Wi-Fi Safe? What the Real Risks Are Now","description":"Is public Wi-Fi safe to use? What has changed since HTTPS became standard, the risks that remain (evil twins, fake portals) and simple habits to stay safe.","image":["https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80"],"datePublished":"2026-10-20","dateModified":"2026-10-20","author":[{"@type":"Person","name":"Tomás Vidal","url":"https://hardenwire.com/authors/tomas-vidal.html","jobTitle":"Networks & Devices Editor"}],"publisher":{"@type":"Organization","@id":"https://hardenwire.com/#organization","name":"Hardenwire","url":"https://hardenwire.com","logo":{"@type":"ImageObject","url":"https://hardenwire.com/assets/icons/logo-512.svg","width":512,"height":512}},"mainEntityOfPage":"https://hardenwire.com/articles/public-wifi-safety.html","articleSection":"Online Safety","keywords":"is public wifi safe, public wifi security risks, coffee shop wifi safety, evil twin wifi, do I need a vpn on public wifi","wordCount":1201}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hardenwire.com/"},{"@type":"ListItem","position":2,"name":"Online Safety","item":"https://hardenwire.com/category/online-safety.html"},{"@type":"ListItem","position":3,"name":"Is public Wi-Fi safe?","item":"https://hardenwire.com/articles/public-wifi-safety.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it safe to do online banking on public Wi-Fi?","acceptedAnswer":{"@type":"Answer","text":"On an up-to-date device using the bank's official app, or a website showing the correct address with HTTPS, the connection is encrypted end to end, and other people on the network can't read it. The bigger risk is being lured to a fake login page, so open the app or type the address yourself rather than following prompts from the hotspot."}},{"@type":"Question","name":"Can someone see my browsing history on public Wi-Fi?","acceptedAnswer":{"@type":"Answer","text":"They can't see the pages or content you view on HTTPS sites. The network operator may still see which domains you connect to (for example, that you visited a news site, but not which articles). A VPN or encrypted DNS hides even that from the local network."}},{"@type":"Question","name":"What is an evil twin hotspot?","acceptedAnswer":{"@type":"Answer","text":"A fake Wi-Fi network set up with a believable name, such as the café's name or 'Airport_Free_WiFi', so that people connect to it instead of the real one. The attacker controls the network and can show fake sign-in pages or try to steer you to look-alike sites."}},{"@type":"Question","name":"Should I turn off Wi-Fi when I'm not using it?","acceptedAnswer":{"@type":"Answer","text":"It isn't essential, but turning off auto-join for public networks is worth doing. It stops your phone silently connecting to any network with a familiar name, which is the main way evil-twin hotspots catch people."}}]}</script>
+</head>
+<body class="page-article" data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="container site-header__inner">
+    <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><button class="primary-nav__btn js-mega" type="button" aria-expanded="false" aria-controls="mega-topics">Topics <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></li>
+        <li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../articles.html">Guides</a></li><li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <button class="theme-toggle js-theme" type="button" aria-label="Toggle dark mode"><svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15A8 8 0 1 1 9 4a6.5 6.5 0 0 0 11 11z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn js-search-open" type="button" aria-label="Search" aria-controls="search-panel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <a class="btn btn--ink btn--sm site-header__cta" href="../newsletter.html">Subscribe</a>
+      <button class="icon-btn menu-btn js-menu-open" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mega" id="mega-topics" hidden>
+  <div class="mega__inner container">
+    <div class="mega__col">
+      <a class="mega__hub" href="../category/cybersecurity.html">Cybersecurity <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Accounts, devices and networks: how attacks work and the defences that stop them.</p>
+      <ul><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/privacy.html">Privacy <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Who collects your data, what they do with it, and how to take back control.</p>
+      <ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/online-safety.html">Online Safety <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Scams, fraud and manipulation, and how to recognise them before they cost you.</p>
+      <ul><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul>
+    </div>
+    <div class="mega__col mega__col--aside">
+      <p class="mega__hub">Start here</p>
+      <ul>
+        <li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li>
+        <li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting a phishing email</a></li>
+        <li><a href="../articles/secure-your-home-router.html">Securing your router</a></li>
+      </ul>
+      <a class="btn btn--ghost btn--sm" href="../categories.html">All topics</a>
+    </div>
+  </div>
+</div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="container">
+      <form class="search-panel__form" action="../search.html" method="get" role="search">
+        <label class="sr-only" for="hdr-q">Search Hardenwire</label>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="hdr-q" name="q" type="search" placeholder="Search guides: phishing, passkeys, VPN…" autocomplete="off" class="js-live-search" aria-describedby="hdr-q-hint">
+        <button class="icon-btn js-search-close" type="button" aria-label="Close search"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </form>
+      <p id="hdr-q-hint" class="sr-only">Suggestions appear as you type. Press Enter for all results.</p>
+      <ul class="search-panel__results js-live-results" role="listbox" aria-label="Suggestions"></ul>
+      <p class="search-panel__popular">Popular: <a href="../search.html?q=phishing">phishing</a> <a href="../search.html?q=passkey">passkeys</a> <a href="../search.html?q=vpn">VPN</a> <a href="../search.html?q=router">router</a> <a href="../search.html?q=data%20breach">data breach</a></p>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-menu__head"><a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a><button class="icon-btn js-menu-close" type="button" aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <form class="mobile-menu__search" action="../search.html" method="get" role="search"><label class="sr-only" for="mm-q">Search</label><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="mm-q" name="q" type="search" placeholder="Search Hardenwire"></form>
+    <nav aria-label="Mobile">
+      <details class="mm-group"><summary>Cybersecurity <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/cybersecurity.html">All cybersecurity</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul></details><details class="mm-group"><summary>Privacy <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/privacy.html">All privacy</a></li><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></details><details class="mm-group"><summary>Online Safety <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/online-safety.html">All online safety</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul></details>
+      <ul class="mm-links">
+        <li><a href="../articles.html">All guides</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../authors.html">Authors</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--accent btn--block" href="../newsletter.html">Get the weekly Briefing</a>
+  </div>
+</div>
+<main id="main">
+
+<div class="progress" aria-hidden="true"><span class="js-progress"></span></div>
+<article class="article">
+  <header class="article-hero container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li aria-current="page">Is public Wi-Fi safe?</li></ol></nav>
+    <div class="article-hero__badges"><a class="badge badge--amber " href="../category/online-safety.html">Online Safety</a></div>
+    <h1 class="article-hero__title">Is Public Wi-Fi Safe? What the Real Risks Are Now</h1>
+    <p class="article-hero__dek">The coffee-shop hacker stealing your bank password is mostly a story from an older internet. Public Wi-Fi still carries risks, though. They're just different from the ones you've been warned about.</p>
+    <div class="byline">
+      <span class="avatar" style="--s:44px" aria-hidden="true">TV</span>
+      <div class="byline__who"><a class="byline__name" href="../authors/tomas-vidal.html">Tomás Vidal</a><span class="byline__role">Networks &amp; Devices Editor</span></div>
+      <dl class="byline__dates">
+        <div><dt>Published</dt><dd><time datetime="2026-10-20">Oct 20, 2026</time></dd></div>
+        
+        <div><dt>Reading time</dt><dd>5 min</dd></div>
+      </dl>
+    </div>
+  </header>
+  <figure class="article-figure container container--wide">
+    <img class="article-figure__img" src="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A man working on a laptop with a coffee in a cafe" width="1200" height="675" fetchpriority="high" decoding="async">
+    <figcaption>Encryption has made café Wi-Fi far safer than it was a decade ago. Photo: <a href="https://unsplash.com/@kyleloftusstudios?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">@kyleloftusstudios</a> on <a href="https://unsplash.com/?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">Unsplash</a></figcaption>
+  </figure>
+  <div class="article-layout container container--wide">
+    <aside class="article-layout__rail"><div class="share share--rail" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html&amp;text=Is%20Public%20Wi-Fi%20Safe%3F%20What%20the%20Real%20Risks%20Are%20Now" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=Is%20Public%20Wi-Fi%20Safe%3F%20What%20the%20Real%20Risks%20Are%20Now&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/public-wifi-safety.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div></aside>
+    <div class="article-main">
+      <details class="toc toc--inline"><summary><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> On this page</summary><ol><li><a href="#myth-vs-reality">Myth vs reality</a></li><li><a href="#the-risks-that-remain">The risks that remain</a></li><li><a href="#six-habits-that-cover-nearly-all-of-it">Six habits that cover nearly all of it</a></li><li><a href="#when-extra-caution-is-justified">When extra caution is justified</a></li><li><a href="#the-bigger-picture">The bigger picture</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></details>
+      <aside class="takeaways" aria-labelledby="kt">
+        <h2 class="takeaways__title" id="kt">Key takeaways</h2>
+        <ul><li>Nearly all websites and apps now encrypt traffic with HTTPS, so other people on the network can't read your passwords or messages.</li><li>The real remaining risks are fake hotspots, malicious sign-in portals, and unpatched devices with sharing switched on.</li><li>Your phone's personal hotspot is usually a safer choice than unknown public Wi-Fi.</li><li>A VPN adds privacy on untrusted networks, but you don't need one to bank safely on a café network if your devices are up to date.</li></ul>
+      </aside>
+      <div class="prose">
+<p>For years the advice was simple: never use public Wi-Fi for anything important. Back then it made sense. Much of the web wasn't encrypted, and anyone on the same open network could run free software to capture other people's logins. That world has largely gone. Today almost every site and app encrypts its traffic by default, and the browser warns loudly when one doesn't.</p>
+
+<p>So is public Wi-Fi safe now? Mostly safer than its reputation, with a few specific traps. Here's what has changed, what hasn't, and the small habits that cover the remaining risk.</p>
+
+<h2 id="myth-vs-reality">Myth vs reality</h2>
+
+<h3 id="anyone-on-the-network-can-read-your-passwords">"Anyone on the network can read your passwords"</h3>
+<p><strong>Mostly no longer true.</strong> When a site uses HTTPS (the padlock, and an address starting <code>https://</code>), everything between your device and the site is encrypted, including passwords, messages and card numbers. Another customer with a laptop sees scrambled data. Google's transparency data shows that the large majority of pages loaded in Chrome now use HTTPS, and banking, email and shopping apps use encrypted connections as standard.</p>
+
+<h3 id="open-networks-with-no-password-are-the-dangerous-ones">"Open networks with no password are the dangerous ones"</h3>
+<p><strong>Only partly true.</strong> A password-protected café network where the password is written on the chalkboard isn't meaningfully more private than an open one: everyone in the room has the same password. What protects you is the encryption between your device and each website, not the Wi-Fi password.</p>
+
+<h3 id="you-must-always-use-a-vpn-on-public-wi-fi">"You must always use a VPN on public Wi-Fi"</h3>
+<p><strong>Helpful, not essential.</strong> A VPN encrypts all your traffic to the VPN provider, which hides even the names of the sites you visit from the local network. That's a genuine privacy gain, especially when travelling. But on an updated device, HTTPS already protects the content. Our guide to <a href="../articles/do-you-need-a-vpn.html">whether you need a VPN</a> covers who benefits most.</p>
+
+<h3 id="public-wi-fi-is-now-completely-safe">"Public Wi-Fi is now completely safe"</h3>
+<p><strong>Also wrong.</strong> The risks have moved away from eavesdropping and towards deception and device exposure.</p>
+
+<h2 id="the-risks-that-remain">The risks that remain</h2>
+
+<h3 id="1-evil-twin-hotspots">1. Evil-twin hotspots</h3>
+<p>An attacker sets up a network called "Airport Free WiFi" or the café's exact name. Your phone, which has connected to a network with that name before, may join automatically. Now someone else is running your network: they can't break HTTPS, but they can show you fake pages and try to steer you to look-alike sites.</p>
+
+<h3 id="2-malicious-sign-in-portals">2. Malicious sign-in portals</h3>
+<p>Hotels, airports and trains often show a "captive portal", a page where you accept terms or enter a room number. A fake network can use this page to ask for things a real portal shouldn't: your email password, a social media login, or for you to "install a security certificate" or a connection app.</p>
+
+<div class="callout callout--danger"><p><strong>Never do this on a hotspot</strong>Don't install profiles, certificates, apps or "network tools" because a Wi-Fi sign-in page tells you to. A real hotspot only ever needs you to accept terms, and sometimes to enter a room number, voucher or email address.</p></div>
+
+<h3 id="3-your-device-is-visible-to-everyone-else">3. Your device is visible to everyone else</h3>
+<p>On a shared network, other devices can see yours. If file sharing, network discovery or a media server is switched on, or if your laptop is missing security updates, you're exposed to anyone in the room. This is why operating systems ask whether a new network is "public" or "private".</p>
+
+<h3 id="4-domain-level-snooping">4. Domain-level snooping</h3>
+<p>Even with HTTPS, the network operator can usually see the <em>names</em> of the sites you connect to (that you visited a health site, though not which page). For most people in a café that's a minor issue. It matters more on networks you have particular reason not to trust.</p>
+
+<h2 id="six-habits-that-cover-nearly-all-of-it">Six habits that cover nearly all of it</h2>
+
+<ol class="steps">
+  <li><strong>Prefer your phone's hotspot.</strong> Mobile data is encrypted between your phone and the carrier, and tethering your laptop to your own phone avoids shared networks entirely. If you have the data allowance, it's usually the better option.</li>
+  <li><strong>Turn off auto-join for public networks.</strong> On iPhone and Android, open the saved network and switch off "Auto-Join" or "Auto-reconnect". Forget networks you won't use again. This defeats most evil twins.</li>
+  <li><strong>Confirm the network name with staff.</strong> If there are two similar networks, ask which is real.</li>
+  <li><strong>Mark the network as public.</strong> On Windows, set the network profile to <em>Public</em>. On a Mac, keep the firewall on and turn off sharing services you don't need. This hides your device from others on the network.</li>
+  <li><strong>Go to important sites yourself.</strong> Use the official app or type the address you know. Don't follow links from a hotspot page into your bank or email.</li>
+  <li><strong>Keep everything updated.</strong> An up-to-date browser and operating system make the remaining risks much harder to exploit.</li>
+</ol>
+
+<h2 id="when-extra-caution-is-justified">When extra caution is justified</h2>
+
+<p>The calculation changes if you're a likely target (a journalist, an activist, someone handling sensitive business information), if you're in a country with heavy network surveillance, or if you need to reach something that isn't encrypted, such as an old internal work system. In those cases, use a reputable VPN or your organisation's VPN on every untrusted network, or stick to mobile data.</p>
+
+<div class="table-wrap" tabindex="0"><table>
+  <thead><tr><th>Situation</th><th>Reasonable choice</th></tr></thead>
+  <tbody>
+    <tr><td>Browsing news, maps or social media in a café</td><td>Public Wi-Fi is fine on an updated device</td></tr>
+    <tr><td>Banking or shopping through the official app</td><td>Fine. The app's connection is encrypted</td></tr>
+    <tr><td>Hotel Wi-Fi on a long trip</td><td>Fine, and a VPN adds privacy from the hotel network</td></tr>
+    <tr><td>Accessing work systems</td><td>Use your employer's VPN as their policy requires</td></tr>
+    <tr><td>High-risk work or a high-surveillance country</td><td>Mobile data or a trustworthy VPN at all times</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="the-bigger-picture">The bigger picture</h2>
+
+<p>The things most likely to go wrong for you today don't depend much on which network you're on. Phishing messages, reused passwords and missing updates cause far more account takeovers than café eavesdroppers. If you've worked through this list, the next most useful step is making your accounts resistant to phishing with <a href="../articles/passkeys-explained.html">passkeys</a> and checking your <a href="../articles/secure-your-home-router.html">home router</a>, the network you use most of all.</p>
+
+      </div>
+      <section class="faq" aria-labelledby="faq"><h2 id="faq">Frequently asked questions</h2><details class="faq__item" open><summary><h3>Is it safe to do online banking on public Wi-Fi?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>On an up-to-date device using the bank's official app, or a website showing the correct address with HTTPS, the connection is encrypted end to end, and other people on the network can't read it. The bigger risk is being lured to a fake login page, so open the app or type the address yourself rather than following prompts from the hotspot.</p></div></details><details class="faq__item"><summary><h3>Can someone see my browsing history on public Wi-Fi?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>They can't see the pages or content you view on HTTPS sites. The network operator may still see which domains you connect to (for example, that you visited a news site, but not which articles). A VPN or encrypted DNS hides even that from the local network.</p></div></details><details class="faq__item"><summary><h3>What is an evil twin hotspot?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>A fake Wi-Fi network set up with a believable name, such as the café's name or 'Airport_Free_WiFi', so that people connect to it instead of the real one. The attacker controls the network and can show fake sign-in pages or try to steer you to look-alike sites.</p></div></details><details class="faq__item"><summary><h3>Should I turn off Wi-Fi when I'm not using it?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>It isn't essential, but turning off auto-join for public networks is worth doing. It stops your phone silently connecting to any network with a familiar name, which is the main way evil-twin hotspots catch people.</p></div></details></section>
+      <section class="sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://consumer.ftc.gov/articles/are-public-wi-fi-networks-safe-what-you-need-know" rel="noopener" target="_blank">FTC: Are public Wi-Fi networks safe? What you need to know</a></li><li><a href="https://transparencyreport.google.com/https/overview" rel="noopener" target="_blank">Google Transparency Report: HTTPS encryption on the web</a></li><li><a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online" rel="noopener" target="_blank">NCSC (UK): Top tips for staying secure online</a></li><li><a href="https://ssd.eff.org/" rel="noopener" target="_blank">EFF Surveillance Self-Defense</a></li></ol><p class="sources__note">Menu names and settings change between software versions. We review this guide regularly; see our <a href="../corrections-policy.html">corrections policy</a> if you spot something out of date.</p></section>
+      <div class="article-tags"><span>Topics:</span><a class="tag" href="../search.html?q=public%20Wi-Fi">public Wi-Fi</a><a class="tag" href="../search.html?q=Wi-Fi">Wi-Fi</a><a class="tag" href="../search.html?q=travel%20security">travel security</a><a class="tag" href="../search.html?q=evil%20twin">evil twin</a><a class="tag" href="../search.html?q=HTTPS">HTTPS</a><a class="tag" href="../search.html?q=VPN">VPN</a></div>
+      <div class="share share--inline" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html&amp;text=Is%20Public%20Wi-Fi%20Safe%3F%20What%20the%20Real%20Risks%20Are%20Now" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=Is%20Public%20Wi-Fi%20Safe%3F%20What%20the%20Real%20Risks%20Are%20Now&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Fpublic-wifi-safety.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/public-wifi-safety.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div>
+      <aside class="author-box">
+        <span class="avatar" style="--s:64px" aria-hidden="true">TV</span>
+        <div><p class="kicker">Written by</p><h2 class="author-box__name"><a href="../authors/tomas-vidal.html">Tomás Vidal</a></h2><p class="author-box__role">Networks &amp; Devices Editor</p><p>Tomás covers home networks, Wi-Fi, routers and phones. He writes the guides you follow with the device in one hand, which means he spends a lot of time in router admin panels and settings menus that change with every update.</p></div>
+      </aside>
+      <p class="review-note"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/></svg><span>Reviewed under the Hardenwire <a href="../editorial-policy.html">editorial policy</a>. We don't accept payment for coverage, and this guide contains no affiliate links.</span></p>
+      <nav class="prevnext" aria-label="More articles">
+        <a class="prevnext__link prevnext__link--prev" href="../articles/do-you-need-a-vpn.html"><span><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Previous</span><strong>Do You Actually Need a VPN? A Straight Answer</strong></a>
+        <a class="prevnext__link prevnext__link--next" href="../articles/browser-privacy-settings.html"><span>Next <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>The Browser Privacy Settings Worth Changing in Chrome, Firefox, Safari and Edge</strong></a>
+      </nav>
+    </div>
+    <aside class="article-layout__toc"><nav class="toc toc--rail js-toc" aria-label="On this page"><p class="toc__title">On this page</p><ol><li><a href="#myth-vs-reality">Myth vs reality</a></li><li><a href="#the-risks-that-remain">The risks that remain</a></li><li><a href="#six-habits-that-cover-nearly-all-of-it">Six habits that cover nearly all of it</a></li><li><a href="#when-extra-caution-is-justified">When extra caution is justified</a></li><li><a href="#the-bigger-picture">The bigger picture</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></aside>
+  </div>
+</article>
+<section class="section section--tint">
+  <div class="container">
+    <header class="section-head"><h2 class="section-head__title">Keep reading</h2><a class="section-head__link" href="../category/online-safety.html">More in Online Safety <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></header>
+    <div class="grid grid--3"><article class="card card--default" data-cats="vpn privacy network-security" data-tags="VPN|privacy|public Wi-Fi|ISP tracking|encryption|free VPN" data-date="2026-10-13" data-updated="2026-11-14" data-pop="880" data-read="5">
+  <a class="card__media" href="../articles/do-you-need-a-vpn.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="Blue ethernet network cables plugged into a switch" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--teal " href="../category/vpn.html">VPN</a>
+    <h3 class="card__title"><a href="../articles/do-you-need-a-vpn.html">Do You Actually Need a VPN? A Straight Answer</a></h3>
+    <p class="card__dek">VPN marketing promises anonymity and protection from hackers. The reality is narrower but still useful. Here's what a VPN changes about your connection, who genuinely benefits, and how to avoid the services that make things worse.</p>
+    <p class="meta"><span class="meta__author">Lena Marsh</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-14">Nov 14, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>5 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="network-security" data-tags="router security|Wi-Fi|WPA3|home network|firmware|smart home" data-date="2026-09-15" data-updated="2026-11-12" data-pop="820" data-read="6">
+  <a class="card__media" href="../articles/secure-your-home-router.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A white home Wi-Fi router standing on a white table" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--teal " href="../category/network-security.html">Network Security</a>
+    <h3 class="card__title"><a href="../articles/secure-your-home-router.html">How to Secure Your Home Router: A 10-Step Checklist</a></h3>
+    <p class="card__dek">Your router is the front door for every device you own, and most have never been touched since installation. This checklist takes about 30 minutes and needs no technical background.</p>
+    <p class="meta"><span class="meta__author">Tomás Vidal</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-12">Nov 12, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>6 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="phishing online-safety browser-security" data-tags="phishing|email security|scams|fake websites|social engineering" data-date="2026-09-08" data-updated="2026-11-04" data-pop="980" data-read="7">
+  <a class="card__media" href="../articles/how-to-spot-a-phishing-email.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="Close-up of the Mail app icon on a smartphone home screen" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--amber " href="../category/phishing.html">Phishing &amp; Scams</a>
+    <h3 class="card__title"><a href="../articles/how-to-spot-a-phishing-email.html">How to Spot a Phishing Email: An Annotated Walkthrough</a></h3>
+    <p class="card__dek">Phishing emails no longer give themselves away with bad spelling. We take a typical modern lure apart line by line, then give you a 30-second routine for any message that asks you to act.</p>
+    <p class="meta"><span class="meta__author">Priya Raman</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-04">Nov 4, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>7 min read</span></p>
+  </div>
+</article></div>
+  </div>
+</section>
+<div class="container section">
+<section class="newsletter newsletter--card" aria-labelledby="nl-art-title">
+  <div class="newsletter__inner">
+    <div class="newsletter__copy">
+      <p class="kicker">Free weekly newsletter</p>
+      <h2 class="newsletter__title" id="nl-art-title">Get guides like this every Thursday</h2>
+      <p>One email every Thursday: the scams going around, the settings worth changing, and one guide worth your time. No sponsors and no tracking pixels.</p>
+    </div>
+    <form class="newsletter__form js-subscribe" novalidate>
+      <label class="sr-only" for="nl-art-email">Email address</label>
+      <div class="field-row">
+        <input id="nl-art-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn btn--accent" type="submit">Subscribe</button>
+      </div>
+      <p class="form-note" role="status" aria-live="polite">Unsubscribe in one click. Read our <a href="../privacy-policy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</section></div>
+<div class="mobile-bar" aria-label="Article tools">
+  <button class="mobile-bar__btn js-toc-sheet" type="button"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> Contents</button>
+  <span class="mobile-bar__time"><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 5 min</span>
+  <button class="mobile-bar__btn js-native-share" type="button" data-title="Is Public Wi-Fi Safe? What the Real Risks Are Now" data-url="https://hardenwire.com/articles/public-wifi-safety.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg> Share</button>
+</div>
+<div class="sheet" id="toc-sheet" hidden><div class="sheet__panel" role="dialog" aria-modal="true" aria-label="Contents"><div class="sheet__head"><p class="toc__title">On this page</p><button class="icon-btn js-sheet-close" type="button" aria-label="Close contents"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><nav class="toc"><ol><li><a href="#myth-vs-reality">Myth vs reality</a></li><li><a href="#the-risks-that-remain">The risks that remain</a></li><li><a href="#six-habits-that-cover-nearly-all-of-it">Six habits that cover nearly all of it</a></li><li><a href="#when-extra-caution-is-justified">When extra caution is justified</a></li><li><a href="#the-bigger-picture">The bigger picture</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></div></div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+        <p>Hardenwire is an independent publication covering cybersecurity, privacy and online safety, with practical guides and plain-English explainers you can act on.</p>
+        <a class="btn btn--outline-light btn--sm" href="../newsletter.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Subscribe to the Briefing</a>
+      </div>
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div><h2 class="site-footer__h">Topics</h2><ul><li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li><li><a href="../category/malware.html">Malware</a></li></ul></div>
+        <div><h2 class="site-footer__h">More topics</h2><ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></div>
+        <div><h2 class="site-footer__h">Popular guides</h2><ul><li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting phishing emails</a></li><li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li><li><a href="../articles/do-you-need-a-vpn.html">Do you need a VPN?</a></li><li><a href="../articles/what-to-do-after-a-data-breach.html">What to do after a data breach</a></li><li><a href="../articles/secure-your-home-router.html">Securing your router</a></li></ul></div>
+        <div><h2 class="site-footer__h">Publication</h2><ul>
+          <li><a href="../about.html">About</a></li><li><a href="../authors.html">Authors</a></li><li><a href="../editorial-policy.html">Editorial policy</a></li><li><a href="../corrections-policy.html">Corrections</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Hardenwire. Independent security &amp; privacy journalism.</p>
+      <ul><li><a href="../privacy-policy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../directory.html">Directory</a></li><li><a href="../sitemap.xml">Sitemap</a></li></ul>
+    </div>
+  </div>
+</footer>
+<script src="../js/articles-data.js" defer></script>
+<script src="../js/articles.js" defer></script>
+<script src="../js/main.js" defer></script>
+
+</body>
+</html>

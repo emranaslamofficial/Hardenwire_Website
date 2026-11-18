@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Blue ethernet network cables plugged into a switch">
+  <rect width="1200" height="675" fill="#eef2f2"/>
+  <path d="M120 590 H1080" stroke="#d4dcdc" stroke-width="2"/>
+  <g transform="translate(600 345) scale(.82) translate(-850 -340)">
+    <circle cx="680" cy="340" r="60" fill="#ffffff" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1040" cy="340" r="60" fill="#ffffff" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M740 310 h240 M740 370 h240" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M760 340 h200" stroke="#c8102e" stroke-width="9" stroke-dasharray="2 22" stroke-linecap="round"/>
+    <path d="M660 340 h40 M1020 340 h40" stroke="#a3b0b0" stroke-width="7" stroke-linecap="round"/>
+    <path d="M760 200 c0-60 80-80 110-40 c20-50 110-40 110 20 c40 0 50 60 0 60 h-210 c-50 0 -50 -50 -10 -40 z" fill="#d4dcdc" stroke="none" opacity=".8"/></g>
+</svg>

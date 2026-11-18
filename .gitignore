@@ -1,0 +1,10 @@
+# PRIVATE: subscriber emails, contact messages, admin password hash.
+# Never commit this folder.
+data/
+
+# Local tooling
+.claude/
+node_modules/
+*.tmp
+.DS_Store
+Thumbs.db

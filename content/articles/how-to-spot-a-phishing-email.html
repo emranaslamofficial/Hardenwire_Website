@@ -1,0 +1,174 @@
+---json
+{
+  "slug": "how-to-spot-a-phishing-email",
+  "title": "How to Spot a Phishing Email: An Annotated Walkthrough",
+  "shortTitle": "Spotting phishing emails",
+  "seoTitle": "How to Spot a Phishing Email: 9 Signs, With a Real-World Example",
+  "description": "Learn to spot phishing emails with an annotated example: sender tricks, link checks, urgency cues and what to do if you already clicked.",
+  "dek": "Phishing emails no longer give themselves away with bad spelling. We take a typical modern lure apart line by line, then give you a 30-second routine for any message that asks you to act.",
+  "stepBlurb": "Learn the handful of checks that catch almost every fake email, text and login page.",
+  "category": "phishing",
+  "also": [
+    "online-safety",
+    "browser-security"
+  ],
+  "tags": [
+    "phishing",
+    "email security",
+    "scams",
+    "fake websites",
+    "social engineering"
+  ],
+  "primaryKeyword": "how to spot a phishing email",
+  "secondaryKeywords": [
+    "phishing email examples",
+    "signs of a phishing email",
+    "what to do if you click a phishing link",
+    "how to check a link"
+  ],
+  "author": "priya-raman",
+  "published": "2026-09-08",
+  "updated": "2026-11-04",
+  "heroSupport": true,
+  "beginner": true,
+  "popularity": 980,
+  "motif": "envelope",
+  "imageAlt": "Close-up of the Mail app icon on a smartphone home screen",
+  "imageCaption": "Phishing works by borrowing trust: a familiar brand, a plausible reason, a deadline",
+  "takeaways": [
+    "Modern phishing is often well written and well branded. Judge a message by what it asks you to do, not how polished it looks.",
+    "The display name means nothing. Check the actual sender domain and, more importantly, where the link really goes.",
+    "Urgency plus a request (sign in, pay, confirm, download) is the core pattern. Pause whenever you see both.",
+    "Never use the link in the message. Go to the service yourself through a bookmark or the app."
+  ],
+  "faq": [
+    {
+      "q": "What happens if I just open a phishing email?",
+      "a": "Opening an email on an up-to-date device is very unlikely to harm you on its own. The risk comes from clicking links, opening attachments, enabling macros, or replying with information. Opening it may confirm to the sender that your address is active, through remote images, so many mail apps block remote images by default."
+    },
+    {
+      "q": "I clicked a phishing link. What should I do?",
+      "a": "If you only clicked and closed the page, the risk is usually low: update your browser and run a security scan. If you entered a password, change it straight away on the real site (and anywhere else you reuse it), sign out of other sessions, and check your two-factor settings. If you entered card details, call your bank using the number on your card. If you downloaded and opened a file, disconnect from the internet and follow our ransomware and malware guidance."
+    },
+    {
+      "q": "How do I report a phishing email?",
+      "a": "Use your email provider's 'Report phishing' option. It helps train their filters. In the US you can forward phishing to reportphishing@apwg.org and report fraud at ReportFraud.ftc.gov. In the UK, forward suspicious emails to report@phishing.gov.uk. If the email impersonates a specific company, most have an abuse or phishing reporting address too."
+    },
+    {
+      "q": "Can phishing emails come from real addresses?",
+      "a": "Yes. If an attacker has broken into a real account, such as a supplier or a friend, their phishing comes from a genuine address and passes every technical check. That's why an unexpected request is a red flag even from someone you know. Confirm it through a different channel."
+    }
+  ],
+  "sources": [
+    {
+      "name": "FTC: How to recognize and avoid phishing scams",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+    },
+    {
+      "name": "NCSC (UK): Phishing: spot and report scam emails, texts, websites and calls",
+      "url": "https://www.ncsc.gov.uk/collection/phishing-scams"
+    },
+    {
+      "name": "FBI Internet Crime Complaint Center (IC3)",
+      "url": "https://www.ic3.gov/",
+      "note": "Annual Internet Crime Reports list phishing/spoofing as the most-reported complaint type"
+    },
+    {
+      "name": "Anti-Phishing Working Group: Report phishing",
+      "url": "https://apwg.org/reportphishing/"
+    }
+  ],
+  "photo": "photo-1596526131083-e8c633c948d2",
+  "photoCredit": "brett_jordan"
+}
+---
+<p>The phishing emails people picture, with broken English, a foreign prince and an obviously fake logo, still exist. They're just no longer the ones that catch people. The lures that work today are tidy, correctly branded, and timed to look like something you were expecting. Many are written with the help of the same AI tools everyone else uses, so poor spelling is no longer a dependable sign.</p>
+
+<p>What hasn't changed is the structure. Almost every phishing message gives you <strong>a reason to act</strong>, <strong>a deadline</strong>, and <strong>a way to act that the attacker controls</strong>. Learn to see that structure and the polish stops mattering. Phishing and spoofing have been the most-reported category of internet crime in the FBI's annual reports for years, so this skill earns its keep.</p>
+
+<h2>A typical lure, annotated</h2>
+
+<p>Here's a composite of the kind of message readers forward to us most often. The brand is invented, but every technique is real. The numbered highlights are explained below.</p>
+
+<div class="specimen" aria-label="Example phishing email">
+  <span class="specimen__label">Example: do not act on this</span>
+  <div class="specimen__head">
+    <p><b>From:</b> <span class="flag">Example Bank Security<sup>1</sup></span> &lt;<span class="flag">alerts@examplebank-secure-verify.example<sup>2</sup></span>&gt;</p>
+    <p><b>Subject:</b> <span class="flag">Action required: unusual sign-in blocked<sup>3</sup></span></p>
+  </div>
+  <div class="specimen__body">
+    <p>Dear <span class="flag">Customer<sup>4</sup></span>,</p>
+    <p>We detected a sign-in attempt to your Online Banking from a new device in <em>Lagos, Nigeria</em>. For your protection we have temporarily limited your account.</p>
+    <p>To restore full access, please verify your identity <span class="flag">within 24 hours<sup>5</sup></span>. Accounts that are not verified will be suspended in line with our security policy.</p>
+    <p><span class="flag">[ Verify my account ]<sup>6</sup></span></p>
+    <p>If this was you, you can ignore this message. <span class="flag">Do not reply to this automated email.<sup>7</sup></span></p>
+    <p>Example Bank · Privacy · Unsubscribe</p>
+  </div>
+</div>
+
+<ol>
+  <li><strong>Display name.</strong> "Example Bank Security" is just text the sender typed. Anyone can set any display name. Many phone mail apps show only this, which is exactly why attackers rely on it.</li>
+  <li><strong>The real address.</strong> The domain is <code>examplebank-secure-verify.example</code>, not the bank's actual domain. Attackers register look-alikes with words like <em>secure</em>, <em>verify</em>, <em>support</em> or <em>account</em>, or swap characters (<code>rn</code> for <code>m</code>, <code>0</code> for <code>o</code>).</li>
+  <li><strong>Fear in the subject line.</strong> "Unusual sign-in" alerts work because real banks send them too. The attacker borrows a legitimate format.</li>
+  <li><strong>Generic greeting.</strong> Not decisive, since some real companies do this too, but your bank usually knows your name.</li>
+  <li><strong>A deadline.</strong> Twenty-four hours, "or your account will be suspended". The point is to make you act before you think.</li>
+  <li><strong>The button.</strong> This is the whole purpose of the email. It leads to a copy of the bank's sign-in page that collects your username, password and, on the next screen, your one-time code.</li>
+  <li><strong>Discouraging replies.</strong> This closes off the obvious way to check. The footer links are decoration, copied from real emails to add credibility.</li>
+</ol>
+
+<p>Notice what is <em>not</em> on the list: spelling mistakes, an ugly layout, or a missing logo. None of those can be relied on any more.</p>
+
+<h2>The 30-second check</h2>
+
+<p>You don't need to analyse every email like this. You need a short routine for the moment a message asks you to <em>do</em> something.</p>
+
+<ol class="steps">
+  <li><strong>Ask: was I expecting this?</strong> A delivery notice for a parcel you did order is different from one for a parcel you didn't. Unexpected plus urgent means slow down.</li>
+  <li><strong>Read the sender's domain, not the name.</strong> On a phone, tap the sender name to reveal the address. The part after the @ should be the organisation's real domain, though even that can be spoofed or sent from a hacked account.</li>
+  <li><strong>Check the link without clicking.</strong> On a computer, hover over it and read the address shown in the bottom corner of your browser or mail app. On a phone, press and hold the link to preview it. Read the domain from right to left, starting at the first single slash: in <code>examplebank.com.account-review.example/login</code>, the real domain is <code>account-review.example</code>.</li>
+  <li><strong>Go around the message.</strong> Open the company's app, or type its address yourself, and look for the alert there. A real problem will show up in your account, and a fake one won't.</li>
+</ol>
+
+<div class="callout callout--tip"><p><strong>The rule that beats every trick</strong>Never sign in, pay or download from a link you were sent. Always go there yourself. This single habit defeats nearly every phishing technique, however convincing the message.</p></div>
+
+<h2>Other red flags worth knowing</h2>
+
+<h3>Attachments that want permission</h3>
+<p>Be wary of invoices, "scanned documents", voicemail files and shipping papers you weren't expecting, especially in formats like <code>.html</code>, <code>.zip</code>, <code>.iso</code>, <code>.one</code> or Office files that ask you to "enable editing" or "enable content". A document that needs you to switch off a protection in order to read it is a warning in itself.</p>
+
+<h3>QR codes in emails</h3>
+<p>Some phishing campaigns now put the link inside a QR code image so that email filters can't read it, and so you'll open it on your phone where the address is harder to check. A real company rarely needs you to scan a code from an email to sign in.</p>
+
+<h3>"Reply to this" requests</h3>
+<p>Not all phishing has a link. Some messages, often posing as a manager, colleague or supplier, simply start a conversation: "Are you at your desk? I need a quick favour." The request that follows is usually gift cards, a changed bank account for a payment, or a document. Confirm through a different channel you already trust, such as a phone number from your own contacts.</p>
+
+<h3>Login pages after a click</h3>
+<p>If you do land on a sign-in page, the address bar is the final check. A padlock only means the connection is encrypted. It says nothing about who runs the site, and phishing pages have padlocks too. This is where a password manager quietly helps: it won't offer to fill your saved password on a domain it doesn't recognise. If it suddenly can't find your login, stop.</p>
+
+<h2>Why the best defence isn't just spotting</h2>
+
+<p>Training your eye helps, but everyone is fooled eventually. You might be tired, the timing might be perfect, or the email might come from a genuinely hacked account. The most reliable protection is to make a successful phish worth less:</p>
+
+<ul>
+  <li><strong>Use passkeys where you can.</strong> They can't be entered on a fake site at all. See <a href="{{a:passkeys-explained}}">how passkeys work</a>.</li>
+  <li><strong>Use the strongest two-factor method each account allows,</strong> ideally not SMS. Our <a href="{{a:two-factor-authentication-methods}}">2FA methods ranking</a> explains why.</li>
+  <li><strong>Use a password manager</strong> so that no password is reused and autofill acts as a domain check.</li>
+  <li><strong>Keep your browser and phone updated,</strong> which reduces the damage a malicious link can do on its own.</li>
+</ul>
+
+<h2>If you already clicked</h2>
+
+<p>Don't panic, and don't be embarrassed. Experienced security people get caught too. What matters is what you do in the next hour.</p>
+
+<table>
+  <thead><tr><th>What happened</th><th>What to do now</th></tr></thead>
+  <tbody>
+    <tr><td>Clicked, then closed the page</td><td>Usually low risk. Update your browser, run your device's built-in security scan, and carry on.</td></tr>
+    <tr><td>Entered a password</td><td>Change it immediately on the real site, plus anywhere you've reused it. Sign out of all sessions and check your recovery email and phone haven't been changed.</td></tr>
+    <tr><td>Entered a 2FA code</td><td>Assume the account was accessed. Change the password, sign out of every session, and review recent activity and connected apps.</td></tr>
+    <tr><td>Entered card or bank details</td><td>Call your bank on the number printed on your card. Ask them to block the card and watch for fraud.</td></tr>
+    <tr><td>Downloaded and opened a file</td><td>Disconnect from the internet, run a full scan, and read our guide to <a href="{{a:ransomware-home-users}}">ransomware at home</a> for next steps.</td></tr>
+  </tbody>
+</table>
+
+<p>Then report the message, using your mail app's "Report phishing" button at a minimum, so the next person is less likely to see it. If the lure moved from email to a phone call, with someone claiming to be from tech support or your bank's fraud team, our guide to <a href="{{a:tech-support-scams}}">tech support scams</a> covers that script.</p>

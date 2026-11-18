@@ -1,0 +1,10 @@
+# Vercel serves the site as static files. These are not needed there,
+# and the admin panel/backend (server.mjs) cannot run on static hosting.
+data/
+_build/
+content/
+docs/
+admin/
+server.mjs
+README.md
+.claude/

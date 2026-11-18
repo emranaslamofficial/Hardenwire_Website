@@ -1,0 +1,158 @@
+---json
+{
+  "slug": "ransomware-home-users",
+  "title": "Ransomware at Home: How It Gets In and the Backup Plan That Beats It",
+  "shortTitle": "Ransomware at home",
+  "seoTitle": "Ransomware Protection for Home Users: Prevention, Backups and Recovery",
+  "description": "How ransomware infects home computers, how to prevent it, and the 3-2-1 backup plan that makes it survivable, plus what to do if your files are already encrypted.",
+  "dek": "Ransomware headlines are about hospitals and pipelines, but the same tools reach home computers through fake downloads and email attachments. The defence that matters most isn't antivirus. It's a backup the malware can't touch.",
+  "category": "malware",
+  "also": [],
+  "tags": [
+    "ransomware",
+    "malware",
+    "backups",
+    "3-2-1 backup",
+    "Windows security",
+    "cracked software"
+  ],
+  "primaryKeyword": "ransomware for home users",
+  "secondaryKeywords": [
+    "ransomware protection",
+    "3-2-1 backup rule",
+    "should I pay the ransom",
+    "how does ransomware spread",
+    "controlled folder access"
+  ],
+  "author": "daniel-okafor",
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "editorsPick": true,
+  "popularity": 610,
+  "motif": "lockfile",
+  "imageAlt": "A hard disk drive used for backups, close up",
+  "imageCaption": "Ransomware locks your files and sells you the key",
+  "takeaways": [
+    "Most home ransomware arrives through things people run themselves: cracked software, fake updates, and email attachments.",
+    "A backup is only ransomware-proof if at least one copy is offline or versioned, so the malware can't reach and encrypt it.",
+    "Follow the 3-2-1 rule: three copies, two different types of storage, one kept off-site or offline.",
+    "If you're hit, disconnect, don't pay, check No More Ransom for a free decryptor, and restore from a clean backup."
+  ],
+  "faq": [
+    {
+      "q": "Should I pay the ransom?",
+      "a": "Law enforcement agencies including the FBI advise against paying. Payment doesn't guarantee you'll get a working decryption key, it funds further attacks, and it may mark you as someone willing to pay. If you have backups, you won't need to consider it. If you're weighing payment for business data, get professional incident-response advice first."
+    },
+    {
+      "q": "Can ransomware infect cloud storage like OneDrive or Google Drive?",
+      "a": "Yes. If the sync folder on your computer is encrypted, the encrypted versions sync to the cloud. The protection is version history: most major cloud services let you restore earlier versions of files or a whole folder for a limited period. Check how long your service keeps versions."
+    },
+    {
+      "q": "Do Macs get ransomware?",
+      "a": "Ransomware targeting macOS exists, but it's far less common than on Windows. The same principles apply: install software only from the App Store or developers you trust, keep macOS updated, and keep a Time Machine backup on a drive that isn't permanently connected."
+    },
+    {
+      "q": "Will antivirus stop ransomware?",
+      "a": "Modern built-in tools, such as Microsoft Defender on Windows and XProtect on macOS, stop a lot of known ransomware. They can't catch everything, especially new variants. That's why backups, not detection, are the defence you can count on."
+    }
+  ],
+  "sources": [
+    {
+      "name": "CISA: #StopRansomware",
+      "url": "https://www.cisa.gov/stopransomware"
+    },
+    {
+      "name": "No More Ransom project",
+      "url": "https://www.nomoreransom.org/",
+      "note": "Free decryption tools from law enforcement and security companies"
+    },
+    {
+      "name": "FBI: Ransomware",
+      "url": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-scams-and-crimes/ransomware"
+    },
+    {
+      "name": "Microsoft Learn: Protect important folders with controlled folder access",
+      "url": "https://learn.microsoft.com/en-us/defender-endpoint/controlled-folders"
+    }
+  ],
+  "photo": "photo-1601737487795-dab272f52420",
+  "photoCredit": "nkend"
+}
+---
+<p>Here is how it usually goes. Someone wants a piece of paid software (a photo editor, a game, an office suite) and finds a "free" version on a download site. The installer seems to work. A day or a week later, every photo in the Pictures folder has a strange new file extension, and a text file on the desktop explains that the files have been encrypted and can be recovered for a few hundred dollars in cryptocurrency.</p>
+
+<p>Ransomware against companies gets the headlines. Against individuals it's quieter and more opportunistic, but the effect is the same: years of family photos, documents and coursework locked away. The good news is that home users have a decisive advantage over hospitals and factories. Your data is small enough to back up properly, cheaply and simply.</p>
+
+<h2>How ransomware reaches home computers</h2>
+
+<h3>Cracked and pirated software</h3>
+<p>This is the most common route we hear about from readers. Cracked software, key generators, game cheats and "activators" are a favourite delivery method because the victim deliberately runs them, often after being told to disable their antivirus "because it gives a false positive".</p>
+
+<h3>Fake updates and fake downloads</h3>
+<p>Pop-ups claiming your browser, video player or Flash (long discontinued) needs an update. Ads at the top of search results that imitate download pages for popular free tools.</p>
+
+<h3>Email attachments</h3>
+<p>Invoices, shipping notices, CVs and "scanned documents" that are really scripts or Office files with malicious macros. Our <a href="{{a:how-to-spot-a-phishing-email}}">phishing guide</a> covers the attachment types to be suspicious of.</p>
+
+<h3>Exposed remote access</h3>
+<p>Less common at home, but it happens: a computer with Remote Desktop exposed to the internet and a weak password, or a home network storage device (NAS) with an unpatched flaw. Several ransomware campaigns have specifically targeted consumer NAS boxes.</p>
+
+<div class="callout callout--info"><p><strong>The pattern</strong>Nearly every home ransomware infection starts with the owner running something they shouldn't have, or leaving something exposed and unpatched. This is good news, because both are things you can control.</p></div>
+
+<h2>Prevention: five habits</h2>
+
+<ol class="steps">
+  <li><strong>Don't run pirated software or cracks.</strong> If cost is the issue, there's almost always a free, legitimate alternative, such as LibreOffice, GIMP, Krita or DaVinci Resolve.</li>
+  <li><strong>Keep the operating system and apps updated automatically,</strong> including your browser, PDF reader and anything with internet access.</li>
+  <li><strong>Leave built-in protection switched on.</strong> On Windows, Microsoft Defender is capable, and its <em>Controlled folder access</em> feature (under <em>Windows Security → Virus &amp; threat protection → Ransomware protection</em>) blocks untrusted programs from changing files in protected folders. It can need some configuration for apps you trust, but it's worth trying.</li>
+  <li><strong>Use a standard (non-administrator) account for daily use.</strong> It limits how much a malicious program can change without prompting you.</li>
+  <li><strong>Be suspicious of anything that asks you to disable security</strong> in order to install or open it.</li>
+</ol>
+
+<h2>The backup plan that beats it</h2>
+
+<p>Prevention reduces the odds. Backups take the threat away. If you can wipe the computer and restore everything, ransomware becomes an inconvenience you recover from in an afternoon.</p>
+
+<p>The catch is that many people's backups wouldn't survive an attack. A USB drive that's always plugged in, or a network folder that's always mapped, looks to the ransomware like just another place to encrypt. A backup is only ransomware-proof if at least one copy is <strong>out of reach</strong>: offline, or protected by version history the malware can't erase.</p>
+
+<h3>The 3-2-1 rule</h3>
+
+<div class="stat"><span class="stat__n">3·2·1</span><p class="stat__t">Keep <strong>3</strong> copies of anything you care about, on <strong>2</strong> different types of storage, with <strong>1</strong> kept off-site or offline.</p></div>
+
+<p>For a typical household, that might look like this:</p>
+
+<table>
+  <thead><tr><th>Copy</th><th>Where</th><th>Protects against</th></tr></thead>
+  <tbody>
+    <tr><td>1. Original</td><td>Your computer</td><td>Nothing on its own</td></tr>
+    <tr><td>2. Cloud with version history</td><td>OneDrive, iCloud Drive, Google Drive, Dropbox, or a dedicated backup service</td><td>Theft, fire, drive failure, and ransomware if you can restore earlier versions</td></tr>
+    <tr><td>3. External drive, disconnected</td><td>A USB drive you plug in weekly for a backup, then unplug</td><td>Ransomware, account lockout, cloud problems</td></tr>
+  </tbody>
+</table>
+
+<h3>Setting it up</h3>
+<ul>
+  <li><strong>Windows:</strong> use <em>File History</em> or the <em>Windows Backup</em> app with an external drive, and make sure OneDrive is backing up your Desktop, Documents and Pictures if you use it.</li>
+  <li><strong>Mac:</strong> use Time Machine with an external drive, and iCloud Drive for documents.</li>
+  <li><strong>Phones:</strong> enable iCloud or Google backup, and back up photos separately.</li>
+</ul>
+
+<div class="callout callout--warning"><p><strong>Test the restore</strong>A backup you've never restored from is a hope, not a plan. Once a quarter, pick a few files and actually restore them from each backup. Make sure you know how to restore a whole folder to an earlier date in your cloud service.</p></div>
+
+<h2>If it's already happened</h2>
+
+<ol class="steps">
+  <li><strong>Disconnect immediately.</strong> Unplug the network cable and turn off Wi-Fi. Unplug any external drives. This stops the encryption spreading to network shares and synced folders.</li>
+  <li><strong>Don't delete the ransom note.</strong> Take a photo of it. It identifies the ransomware family, which matters for the next step.</li>
+  <li><strong>Check No More Ransom.</strong> The <a href="https://www.nomoreransom.org/" rel="noopener" target="_blank">No More Ransom project</a>, run by law enforcement and security companies, offers free decryptors for many ransomware families, plus a tool to identify which one you have.</li>
+  <li><strong>Pause cloud sync and check version history</strong> from a different, clean device. You may be able to roll your cloud folder back to before the encryption.</li>
+  <li><strong>Report it.</strong> In the U.S., report to the FBI's <a href="https://www.ic3.gov/" rel="noopener" target="_blank">IC3</a>. In the UK, report to Action Fraud. Reports help investigators and sometimes lead to decryptors.</li>
+  <li><strong>Wipe and rebuild.</strong> Reinstall the operating system (or use the reset option that removes everything), then restore your files from a backup made before the infection.</li>
+  <li><strong>Change your passwords from a clean device.</strong> Many ransomware strains also steal saved browser passwords before encrypting files. Treat every password saved in that browser as compromised, and switch to <a href="{{a:passkeys-explained}}">passkeys</a> where you can.</li>
+</ol>
+
+<h2>About paying</h2>
+
+<p>Law enforcement advises against paying. There's no guarantee you'll get a working key, you'll be funding the next attack, and payers can be targeted again. With a working backup, the question never comes up, which is the whole point of this guide. Set up the disconnected drive this week. Of everything here, it's the step that turns a disaster into a bad afternoon.</p>
+
+<p>For the same kind of thinking applied to phones, where the threats look rather different, see <a href="{{a:signs-your-phone-has-malware}}">how to tell if your phone has malware</a>.</p>

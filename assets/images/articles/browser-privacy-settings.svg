@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Logos of popular web browsers displayed on a screen">
+  <rect width="1200" height="675" fill="#eef2f2"/>
+  <path d="M120 590 H1080" stroke="#d4dcdc" stroke-width="2"/>
+  <g transform="translate(600 345) scale(.82) translate(-850 -340)">
+    <rect x="620" y="150" width="480" height="340" rx="18" fill="#ffffff" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M620 210 h480" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="655" cy="180" r="8" fill="#c8102e"/><circle cx="685" cy="180" r="8" fill="#a3b0b0"/><circle cx="715" cy="180" r="8" fill="#a3b0b0"/>
+    <rect x="760" y="168" width="300" height="24" rx="12" fill="#d4dcdc"/>
+    <path d="M720 350 c60-80 200-80 260 0 c-60 80 -200 80 -260 0 z" fill="none" stroke="#14181f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="850" cy="350" r="34" fill="#14181f"/>
+    <path d="M730 440 l240 -180" stroke="#c8102e" stroke-width="10" stroke-linecap="round"/></g>
+</svg>

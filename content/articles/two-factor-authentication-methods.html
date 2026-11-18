@@ -1,0 +1,172 @@
+---json
+{
+  "slug": "two-factor-authentication-methods",
+  "title": "Two-Factor Authentication Methods, Ranked From Weakest to Strongest",
+  "shortTitle": "2FA methods, ranked",
+  "seoTitle": "Types of Two-Factor Authentication Ranked: SMS vs App vs Security Key",
+  "description": "SMS codes, authenticator apps, push prompts, security keys and passkeys compared. Which two-factor method to choose, and why any 2FA beats none.",
+  "dek": "Any second factor is better than none, but they are not equal. We rank the common two-factor methods by how well they hold up against today's attacks, and explain how to choose for each account.",
+  "stepBlurb": "Add a second lock to email and banking, and pick a method that holds up against phishing.",
+  "category": "password-security",
+  "also": [
+    "identity-protection",
+    "mobile-security"
+  ],
+  "tags": [
+    "two-factor authentication",
+    "2FA",
+    "MFA",
+    "authenticator app",
+    "security keys",
+    "SIM swap"
+  ],
+  "primaryKeyword": "types of two factor authentication",
+  "secondaryKeywords": [
+    "sms 2fa vs authenticator app",
+    "is sms 2fa safe",
+    "best 2fa method",
+    "mfa fatigue"
+  ],
+  "author": "daniel-okafor",
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "beginner": true,
+  "popularity": 760,
+  "motif": "layers",
+  "imageAlt": "A person holding a smartphone in one hand while using it",
+  "imageCaption": "Each extra factor is another lock an attacker has to pick",
+  "takeaways": [
+    "Turning on any form of two-factor authentication blocks most opportunistic account takeovers. Don't let the perfect stop you from starting.",
+    "SMS codes are the weakest option because of SIM-swap fraud and phishing. Use them only where nothing better is offered.",
+    "Authenticator apps are a solid default. Push prompts with number matching are better than bare 'Approve?' prompts.",
+    "Security keys and passkeys are the only common methods that resist phishing outright."
+  ],
+  "faq": [
+    {
+      "q": "Is SMS two-factor authentication better than nothing?",
+      "a": "Yes, clearly. A password alone can be guessed, reused or leaked in a breach. SMS adds a step most mass attacks can't complete. Its weaknesses (SIM swaps and phishing) matter most for high-value targets, so upgrade to an app, key or passkey on your email and financial accounts when you can."
+    },
+    {
+      "q": "What happens if I lose the phone with my authenticator app?",
+      "a": "That's what backup codes are for. Most services give you a set of single-use recovery codes when you turn on 2FA. Print them or store them in your password manager. Some authenticator apps also offer encrypted cloud backup or transfer to a new phone, which is worth enabling."
+    },
+    {
+      "q": "What is MFA fatigue?",
+      "a": "It's an attack where someone who already has your password triggers sign-in approval prompts on your phone again and again, hoping you'll tap Approve to make them stop. If you get a prompt you didn't trigger, deny it and change your password, because the attacker already knows it."
+    },
+    {
+      "q": "Do I need a hardware security key?",
+      "a": "Most people don't, especially if they use passkeys. Security keys are worth it for people at higher risk (journalists, activists, executives, administrators) or for anyone who wants the strongest protection on their email account. If you buy them, register at least two and keep one somewhere safe."
+    }
+  ],
+  "sources": [
+    {
+      "name": "CISA: More than a password",
+      "url": "https://www.cisa.gov/mfa"
+    },
+    {
+      "name": "NIST SP 800-63B: Authentication and lifecycle management",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "note": "Classifies SMS/PSTN as a restricted authenticator"
+    },
+    {
+      "name": "2FA Directory: which sites support which methods",
+      "url": "https://2fa.directory/"
+    },
+    {
+      "name": "FIDO Alliance: Passkeys",
+      "url": "https://fidoalliance.org/passkeys/"
+    }
+  ],
+  "photo": "photo-1526045612212-70caf35c14df",
+  "photoCredit": "freestocks"
+}
+---
+<p>Two-factor authentication (2FA, also called multi-factor authentication or MFA) means a stolen password is no longer enough to get into your account. The attacker also needs something you <em>have</em> (your phone, a security key) or something you <em>are</em> (a fingerprint that unlocks a passkey). It's one of the few security measures with very little downside.</p>
+
+<p>The catch is that "turn on 2FA" covers very different technologies. A text message code and a hardware security key are both second factors, but they fail in completely different ways. Below, the common methods are ranked from weakest to strongest, with what each one protects against and where it breaks.</p>
+
+<div class="callout callout--info"><p><strong>Before you read the ranking</strong>Even the weakest method on this list is a large improvement on a password alone. If an account offers only SMS, turn on SMS. Then upgrade where better options exist.</p></div>
+
+<h2>6. Email codes</h2>
+
+<p>Some services email a one-time code when you sign in from a new device. It stops someone who only has your password. But if your email account is the one being attacked, or shares a password with the account, it adds very little. Your email account itself should never rely on email codes.</p>
+
+<p><strong>Verdict:</strong> better than nothing for low-value accounts. Make sure the email account it depends on is locked down properly.</p>
+
+<h2>5. SMS text message codes</h2>
+
+<p>The most widely offered method and the most criticised. It fails in two main ways:</p>
+
+<ul>
+  <li><strong>SIM swapping.</strong> A criminal persuades or bribes a mobile carrier employee to move your number to a SIM card they control. Your texts, including your codes, then go to them. This is targeted fraud, but it happens often enough that NIST's authentication guidelines treat SMS as a "restricted" method that organisations should offer alternatives to.</li>
+  <li><strong>Real-time phishing.</strong> A fake login page asks for your password, and then for "the code we just sent you". The attacker types both into the real site within seconds. SMS offers no defence against this, and neither do the next two methods on the list.</li>
+</ul>
+
+<p><strong>Verdict:</strong> use it where it's the only option. Ask your carrier about a SIM lock, port-out PIN or "number lock" to make SIM swaps harder.</p>
+
+<h2>4. Push notification prompts</h2>
+
+<p>You sign in, and your phone shows "Is this you trying to sign in?". You tap Approve. It's convenient, and it doesn't involve your phone number. The weakness is human: attackers who already have your password can trigger prompt after prompt until a tired or confused person taps Approve. This is called <em>MFA fatigue</em> or prompt bombing, and it has been used in high-profile corporate breaches.</p>
+
+<p>Better implementations use <strong>number matching</strong>: the sign-in screen shows a number that you type into the app. You can't do that unless you're actually looking at the sign-in screen, which defeats most prompt bombing.</p>
+
+<p><strong>Verdict:</strong> good when number matching or location details are shown. Never approve a prompt you didn't start. An unexpected prompt means your password is already known, so change it.</p>
+
+<h2>3. Authenticator app codes (TOTP)</h2>
+
+<p>Apps such as Google Authenticator, Microsoft Authenticator, Authy, or the code generators built into password managers produce a new six-digit code every 30 seconds. The code is calculated on your device from a secret shared when you scanned the setup QR code. Nothing travels over the phone network, so SIM swapping is irrelevant.</p>
+
+<p>The remaining weakness is the same real-time phishing relay that defeats SMS: if you type an app code into a fake site, the attacker can use it immediately. App codes protect you very well against leaked and reused passwords, but not against a convincing fake page.</p>
+
+<p><strong>Verdict:</strong> the sensible default for most accounts that don't support passkeys. Turn on the app's backup or transfer feature so a lost phone doesn't lock you out.</p>
+
+<div class="callout callout--tip"><p><strong>Password manager or separate app?</strong>Keeping 2FA codes in the same password manager as your passwords is more convenient but puts both factors in one place. For most people with a strong master password and 2FA on the manager itself, it's a reasonable trade. For email and banking, consider a separate authenticator app.</p></div>
+
+<h2>2. Hardware security keys</h2>
+
+<p>A small USB or NFC device, such as a YubiKey or Google Titan Key, that you tap or plug in to sign in. Keys built on the FIDO2/WebAuthn standard check the website's real domain before responding, so a phishing page simply gets no answer. This is the property security agencies call <strong>phishing resistance</strong>, and it is why CISA recommends phishing-resistant MFA as the gold standard.</p>
+
+<p>The downsides are practical. They cost money, you need at least two (one as a spare), and you have to carry one. Not every service supports them, though the important ones (Google, Microsoft, Apple, major password managers, many banks and social networks) do.</p>
+
+<p><strong>Verdict:</strong> the strongest option for people at elevated risk, and worth considering for anyone's primary email account.</p>
+
+<h2>1. Passkeys</h2>
+
+<p>Passkeys use the same FIDO technology as security keys, but the key lives in your phone, computer or password manager and is unlocked with your fingerprint, face or PIN. You get phishing resistance without buying hardware, and in practice the sign-in is <em>faster</em> than typing a password and a code.</p>
+
+<p>Strictly speaking, a passkey isn't a second factor added to a password. It replaces both, combining something you have (the device) with something you are or know (biometric or PIN). Our full explainer covers <a href="{{a:passkeys-explained}}">how passkeys work and what happens if you lose your phone</a>.</p>
+
+<p><strong>Verdict:</strong> the best choice wherever it's offered.</p>
+
+<h2>The ranking at a glance</h2>
+
+<table>
+  <thead><tr><th>Method</th><th>Stops reused / leaked passwords</th><th>Stops SIM swap</th><th>Stops real-time phishing</th><th>Effort</th></tr></thead>
+  <tbody>
+    <tr><td>Passkey</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Lowest</td></tr>
+    <tr><td>Security key</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Medium</td></tr>
+    <tr><td>Authenticator app</td><td>Yes</td><td>Yes</td><td>No</td><td>Low</td></tr>
+    <tr><td>Push with number match</td><td>Yes</td><td>Yes</td><td>Partly</td><td>Low</td></tr>
+    <tr><td>SMS code</td><td>Yes</td><td>No</td><td>No</td><td>Low</td></tr>
+    <tr><td>Email code</td><td>Partly</td><td>n/a</td><td>No</td><td>Low</td></tr>
+  </tbody>
+</table>
+
+<h2>What to set up, account by account</h2>
+
+<p>You don't need the strongest method everywhere. Spend your effort where the damage would be greatest:</p>
+
+<ol class="steps">
+  <li><strong>Email account:</strong> passkey or security key, with an authenticator app as backup. This account can reset everything else.</li>
+  <li><strong>Apple, Google or Microsoft account and your password manager:</strong> passkey plus strong recovery options. These hold your other credentials.</li>
+  <li><strong>Banking and payment apps:</strong> the strongest method the bank offers. Often that's an in-app approval, which is fine.</li>
+  <li><strong>Social media and shopping:</strong> authenticator app or passkey.</li>
+  <li><strong>Everything else:</strong> whatever is offered. SMS is acceptable here.</li>
+</ol>
+
+<p>Whatever you choose, save the <strong>backup codes</strong>. Lockouts from lost phones are far more common than sophisticated attacks, and a printed sheet of recovery codes in a drawer solves most of them.</p>
+
+<h2>A note on passwords</h2>
+
+<p>2FA doesn't make your password irrelevant. Current NIST guidance favours <em>length</em> over complexity rules and recommends against forced periodic changes. A long, unique passphrase stored in a password manager is the right foundation, and 2FA sits on top. If your details have already appeared in a breach, follow our <a href="{{a:what-to-do-after-a-data-breach}}">data breach checklist</a>, which covers resetting passwords and adding 2FA in the right order.</p>

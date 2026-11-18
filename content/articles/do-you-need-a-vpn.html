@@ -1,0 +1,155 @@
+---json
+{
+  "slug": "do-you-need-a-vpn",
+  "title": "Do You Actually Need a VPN? A Straight Answer",
+  "shortTitle": "Do you need a VPN?",
+  "seoTitle": "Do I Need a VPN? What VPNs Protect, What They Don't, and Who Needs One",
+  "description": "An honest, non-affiliate answer to 'do I need a VPN?': what a VPN really hides, the threats it does nothing about, who benefits, and how to choose one.",
+  "dek": "VPN marketing promises anonymity and protection from hackers. The reality is narrower but still useful. Here's what a VPN changes about your connection, who genuinely benefits, and how to avoid the services that make things worse.",
+  "category": "vpn",
+  "also": [
+    "privacy",
+    "network-security"
+  ],
+  "tags": [
+    "VPN",
+    "privacy",
+    "public Wi-Fi",
+    "ISP tracking",
+    "encryption",
+    "free VPN"
+  ],
+  "primaryKeyword": "do I need a vpn",
+  "secondaryKeywords": [
+    "what does a vpn protect",
+    "what does a vpn not protect",
+    "are free vpns safe",
+    "how to choose a vpn"
+  ],
+  "author": "lena-marsh",
+  "published": "2026-10-13",
+  "updated": "2026-11-14",
+  "editorsPick": true,
+  "popularity": 880,
+  "motif": "tunnel",
+  "imageAlt": "Blue ethernet network cables plugged into a switch",
+  "imageCaption": "A VPN moves your traffic into an encrypted tunnel, and moves your trust to whoever runs the far end",
+  "takeaways": [
+    "A VPN hides your traffic from the local network and your internet provider, and hides your IP address from the sites you visit.",
+    "Using a VPN means trusting the provider instead, because they can see what your ISP used to see.",
+    "It does not stop phishing, malware, account-based tracking by Google or Meta, or most browser fingerprinting.",
+    "Avoid free VPNs that make money from your data. Look for independent audits, a clear business model, and modern protocols."
+  ],
+  "faq": [
+    {
+      "q": "Does a VPN make me anonymous?",
+      "a": "No. It hides your IP address from websites and your browsing from your internet provider, but you're still identifiable when you sign in to accounts, through cookies, and through browser fingerprinting. The VPN provider can also see your traffic metadata. Anonymity requires much more, such as the Tor Browser and careful habits."
+    },
+    {
+      "q": "Does a VPN protect me from hackers?",
+      "a": "Only from one kind: people trying to snoop or tamper on the local network you're connected to. It does nothing about phishing emails, malicious downloads, weak or reused passwords, or vulnerabilities on your device, which together account for most real-world compromises."
+    },
+    {
+      "q": "Should I leave my VPN on all the time?",
+      "a": "If you've chosen a VPN for privacy from your internet provider, yes, because that's the point. If you mainly use it on public Wi-Fi, turning it on automatically for untrusted networks is a sensible middle ground. Some banking and streaming services block VPN traffic, so you may need to pause it occasionally."
+    },
+    {
+      "q": "Are VPNs legal?",
+      "a": "In most countries, including the US, UK, Canada, Australia and the EU, using a VPN is legal. A handful of countries restrict or ban unapproved VPNs. Using a VPN doesn't make illegal activity legal, and streaming services' terms often forbid using one to change region."
+    }
+  ],
+  "sources": [
+    {
+      "name": "EFF Surveillance Self-Defense: Choosing the VPN that's right for you",
+      "url": "https://ssd.eff.org/module/choosing-vpn-thats-right-you"
+    },
+    {
+      "name": "FTC: Virtual Private Network (VPN) apps on mobile devices",
+      "url": "https://consumer.ftc.gov/articles/virtual-private-network-vpn-apps-mobile-devices"
+    },
+    {
+      "name": "WireGuard protocol",
+      "url": "https://www.wireguard.com/"
+    }
+  ],
+  "photo": "photo-1544197150-b99a580bb7a8",
+  "photoCredit": "jouwdan"
+}
+---
+<p>If you've watched a YouTube video or a podcast in the last few years, you've heard a VPN advert. Many imply that without one, hackers are watching your every move and your identity is up for grabs. It's a profitable message, and it explains why so much VPN "advice" online comes from sites earning a commission on every sign-up.</p>
+
+<p>We don't take affiliate fees, so here's the answer without the sales pitch: <strong>a VPN is a useful privacy tool for specific situations, and an unnecessary expense in many others.</strong> Whether you need one depends on what you're trying to protect, and from whom.</p>
+
+<h2>What a VPN actually does</h2>
+
+<p>Normally, your device connects to websites through whatever network you're on (home broadband, a café, a hotel) and then through your internet service provider (ISP). With a VPN, your device first builds an encrypted tunnel to a server run by the VPN company. All your traffic travels inside that tunnel, and leaves onto the internet from the VPN server.</p>
+
+<p>That causes three changes:</p>
+
+<ul>
+  <li><strong>The local network and your ISP can no longer see where you're going.</strong> They see an encrypted connection to a VPN server and nothing more.</li>
+  <li><strong>Websites see the VPN server's IP address instead of yours.</strong> This hides your approximate location and makes it harder to link visits by IP.</li>
+  <li><strong>The VPN provider can now see what your ISP used to see.</strong> This is the part adverts leave out. You haven't removed the observer. You've chosen a different one.</li>
+</ul>
+
+<div class="callout callout--info"><p><strong>The core trade-off</strong>A VPN doesn't remove trust from the equation. It moves it. Using one makes sense when you trust the VPN provider more than the network or ISP you'd otherwise be exposed to.</p></div>
+
+<h2>What a VPN doesn't do</h2>
+
+<p>This list matters more than the first one, because it covers the threats that cause most real harm:</p>
+
+<table>
+  <thead><tr><th>Threat</th><th>Does a VPN help?</th><th>What actually helps</th></tr></thead>
+  <tbody>
+    <tr><td>Phishing emails and fake login pages</td><td>No</td><td><a href="{{a:passkeys-explained}}">Passkeys</a>, a password manager, <a href="{{a:how-to-spot-a-phishing-email}}">recognising lures</a></td></tr>
+    <tr><td>Malware and malicious downloads</td><td>No (a few VPNs block known bad domains, which is a minor help)</td><td>Updates, trusted app stores, caution with attachments</td></tr>
+    <tr><td>Tracking by Google, Meta and other accounts</td><td>No. They know it's you because you're signed in</td><td>Account privacy settings, fewer signed-in services</td></tr>
+    <tr><td>Cookies and browser fingerprinting</td><td>Very little</td><td><a href="{{a:browser-privacy-settings}}">Browser privacy settings</a>, tracker blockers</td></tr>
+    <tr><td>Data breaches at companies you use</td><td>No</td><td>Unique passwords, 2FA, credit freezes</td></tr>
+    <tr><td>Snooping on the local Wi-Fi</td><td>Yes</td><td>VPN, or mobile data</td></tr>
+    <tr><td>ISP logging or selling browsing data</td><td>Yes</td><td>VPN, or encrypted DNS for partial protection</td></tr>
+  </tbody>
+</table>
+
+<h2>Who genuinely benefits</h2>
+
+<h3>You probably want one if…</h3>
+<ul>
+  <li><strong>You regularly use networks you don't trust:</strong> hotels, airports, conferences, shared accommodation. See our guide to <a href="{{a:public-wifi-safety}}">public Wi-Fi risks</a> for what a VPN does and doesn't add there.</li>
+  <li><strong>You don't want your ISP to see your browsing.</strong> In some countries ISPs may log or sell browsing data, or are required to retain it.</li>
+  <li><strong>You're in a country that censors or heavily surveils the internet,</strong> keeping local laws and your personal risk in mind.</li>
+  <li><strong>You want to hide your IP address from the sites you visit,</strong> for example if you're researching something sensitive or have reason to keep your location private.</li>
+  <li><strong>Your employer requires one</strong> to reach work systems. That's a corporate VPN, which is a different product with a different purpose.</li>
+</ul>
+
+<h3>You can probably skip it if…</h3>
+<ul>
+  <li>You mostly browse at home on your own network with an ISP you're comfortable with.</li>
+  <li>Your main worry is "hackers". Your money and effort are better spent on passkeys, a password manager and updates.</li>
+  <li>You were hoping for anonymity. A VPN alone doesn't provide it.</li>
+</ul>
+
+<h2>The problem with free VPNs</h2>
+
+<p>Running a VPN costs real money: servers, bandwidth and staff. A service that charges nothing has to pay for itself somehow, and the methods aren't always visible. Researchers and journalists have repeatedly found free VPN apps that log and sell browsing data, inject advertising, request excessive permissions, or fail to encrypt traffic properly. In other words, some free VPNs do the very thing you installed a VPN to prevent.</p>
+
+<p>There are honest exceptions, usually limited free tiers from paid providers, or tools from non-profits. If a free VPN can't clearly explain how it makes money, assume the answer is your data.</p>
+
+<h2>How to choose one</h2>
+
+<ol class="steps">
+  <li><strong>Look for independent audits.</strong> Reputable providers commission outside security firms to audit their no-logging claims and apps, and publish the results. A no-logs promise without an audit is just marketing.</li>
+  <li><strong>Check the business model and ownership.</strong> You should be able to find out who runs the company and how it earns money.</li>
+  <li><strong>Prefer modern protocols.</strong> WireGuard and OpenVPN are well-studied. Avoid services that rely on PPTP or obscure proprietary protocols.</li>
+  <li><strong>Make sure it has a kill switch,</strong> which blocks traffic if the VPN connection drops so your real IP isn't exposed.</li>
+  <li><strong>Read the permissions on mobile.</strong> A VPN app has no reason to need your contacts or photos.</li>
+  <li><strong>Ignore "military-grade encryption" claims.</strong> Every competent VPN uses standard strong encryption. It's a marketing phrase, not a feature.</li>
+</ol>
+
+<h2>Cheaper partial alternatives</h2>
+
+<p>If you mainly want to stop your ISP or the local network seeing which sites you visit, <strong>encrypted DNS</strong> (DNS over HTTPS, often labelled "Use secure DNS" in browser settings) hides your DNS lookups at no cost. It isn't a full VPN, because the network can still see the IP addresses you connect to, but it closes one of the easier leaks. Apple's iCloud+ Private Relay is another option for Safari users. It splits trust between two separate operators, though it only covers some traffic.</p>
+
+<h2>The straight answer</h2>
+
+<p>A VPN is a privacy tool, not a security cure-all. If you travel, use untrusted networks often, or want privacy from your ISP, a reputable paid VPN is worth the money. If you don't, you'll get far more protection from the free basics: passkeys, two-factor authentication, updates and a few <a href="{{a:browser-privacy-settings}}">browser settings</a>. And if your worry is how much of you is already out there, a VPN won't touch that. Our <a href="{{a:reduce-your-digital-footprint}}">digital footprint guide</a> will.</p>

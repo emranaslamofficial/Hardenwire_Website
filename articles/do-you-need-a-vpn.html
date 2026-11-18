@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" data-font="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do I Need a VPN? What VPNs Protect, What They Don't, and Who Needs One | Hardenwire</title>
+<meta name="description" content="An honest, non-affiliate answer to 'do I need a VPN?': what a VPN really hides, the threats it does nothing about, who benefits, and how to choose one.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hardenwire.com/articles/do-you-need-a-vpn.html">
+<meta property="og:site_name" content="Hardenwire">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Do I Need a VPN? What VPNs Protect, What They Don't, and Who Needs One">
+<meta property="og:description" content="An honest, non-affiliate answer to 'do I need a VPN?': what a VPN really hides, the threats it does nothing about, who benefits, and how to choose one.">
+<meta property="og:url" content="https://hardenwire.com/articles/do-you-need-a-vpn.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hardenwire">
+<meta name="twitter:title" content="Do I Need a VPN? What VPNs Protect, What They Don't, and Who Needs One">
+<meta name="twitter:description" content="An honest, non-affiliate answer to 'do I need a VPN?': what a VPN really hides, the threats it does nothing about, who benefits, and how to choose one.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80">
+<meta name="theme-color" content="#0f1c2e">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500..800&family=Lora:wght@400..700&family=Inter:wght@400..700&display=swap">
+<style>html[data-font]{--f-display:'Playfair Display', Georgia, serif;--f-serif:'Lora', Georgia, serif;--f-sans:'Inter', system-ui, Arial, sans-serif}</style>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/article.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script>try{var t=localStorage.getItem('hw-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Do You Actually Need a VPN? A Straight Answer","description":"An honest, non-affiliate answer to 'do I need a VPN?': what a VPN really hides, the threats it does nothing about, who benefits, and how to choose one.","image":["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80"],"datePublished":"2026-10-13","dateModified":"2026-11-14","author":[{"@type":"Person","name":"Lena Marsh","url":"https://hardenwire.com/authors/lena-marsh.html","jobTitle":"Privacy Editor"}],"publisher":{"@type":"Organization","@id":"https://hardenwire.com/#organization","name":"Hardenwire","url":"https://hardenwire.com","logo":{"@type":"ImageObject","url":"https://hardenwire.com/assets/icons/logo-512.svg","width":512,"height":512}},"mainEntityOfPage":"https://hardenwire.com/articles/do-you-need-a-vpn.html","articleSection":"VPN","keywords":"do I need a vpn, what does a vpn protect, what does a vpn not protect, are free vpns safe, how to choose a vpn","wordCount":1221}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hardenwire.com/"},{"@type":"ListItem","position":2,"name":"Privacy","item":"https://hardenwire.com/category/privacy.html"},{"@type":"ListItem","position":3,"name":"VPN","item":"https://hardenwire.com/category/vpn.html"},{"@type":"ListItem","position":4,"name":"Do you need a VPN?","item":"https://hardenwire.com/articles/do-you-need-a-vpn.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does a VPN make me anonymous?","acceptedAnswer":{"@type":"Answer","text":"No. It hides your IP address from websites and your browsing from your internet provider, but you're still identifiable when you sign in to accounts, through cookies, and through browser fingerprinting. The VPN provider can also see your traffic metadata. Anonymity requires much more, such as the Tor Browser and careful habits."}},{"@type":"Question","name":"Does a VPN protect me from hackers?","acceptedAnswer":{"@type":"Answer","text":"Only from one kind: people trying to snoop or tamper on the local network you're connected to. It does nothing about phishing emails, malicious downloads, weak or reused passwords, or vulnerabilities on your device, which together account for most real-world compromises."}},{"@type":"Question","name":"Should I leave my VPN on all the time?","acceptedAnswer":{"@type":"Answer","text":"If you've chosen a VPN for privacy from your internet provider, yes, because that's the point. If you mainly use it on public Wi-Fi, turning it on automatically for untrusted networks is a sensible middle ground. Some banking and streaming services block VPN traffic, so you may need to pause it occasionally."}},{"@type":"Question","name":"Are VPNs legal?","acceptedAnswer":{"@type":"Answer","text":"In most countries, including the US, UK, Canada, Australia and the EU, using a VPN is legal. A handful of countries restrict or ban unapproved VPNs. Using a VPN doesn't make illegal activity legal, and streaming services' terms often forbid using one to change region."}}]}</script>
+</head>
+<body class="page-article" data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="container site-header__inner">
+    <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><button class="primary-nav__btn js-mega" type="button" aria-expanded="false" aria-controls="mega-topics">Topics <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></li>
+        <li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../articles.html">Guides</a></li><li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <button class="theme-toggle js-theme" type="button" aria-label="Toggle dark mode"><svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15A8 8 0 1 1 9 4a6.5 6.5 0 0 0 11 11z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn js-search-open" type="button" aria-label="Search" aria-controls="search-panel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <a class="btn btn--ink btn--sm site-header__cta" href="../newsletter.html">Subscribe</a>
+      <button class="icon-btn menu-btn js-menu-open" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mega" id="mega-topics" hidden>
+  <div class="mega__inner container">
+    <div class="mega__col">
+      <a class="mega__hub" href="../category/cybersecurity.html">Cybersecurity <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Accounts, devices and networks: how attacks work and the defences that stop them.</p>
+      <ul><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/privacy.html">Privacy <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Who collects your data, what they do with it, and how to take back control.</p>
+      <ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul>
+    </div><div class="mega__col">
+      <a class="mega__hub" href="../category/online-safety.html">Online Safety <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="mega__desc">Scams, fraud and manipulation, and how to recognise them before they cost you.</p>
+      <ul><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul>
+    </div>
+    <div class="mega__col mega__col--aside">
+      <p class="mega__hub">Start here</p>
+      <ul>
+        <li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li>
+        <li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting a phishing email</a></li>
+        <li><a href="../articles/secure-your-home-router.html">Securing your router</a></li>
+      </ul>
+      <a class="btn btn--ghost btn--sm" href="../categories.html">All topics</a>
+    </div>
+  </div>
+</div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="container">
+      <form class="search-panel__form" action="../search.html" method="get" role="search">
+        <label class="sr-only" for="hdr-q">Search Hardenwire</label>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="hdr-q" name="q" type="search" placeholder="Search guides: phishing, passkeys, VPN…" autocomplete="off" class="js-live-search" aria-describedby="hdr-q-hint">
+        <button class="icon-btn js-search-close" type="button" aria-label="Close search"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </form>
+      <p id="hdr-q-hint" class="sr-only">Suggestions appear as you type. Press Enter for all results.</p>
+      <ul class="search-panel__results js-live-results" role="listbox" aria-label="Suggestions"></ul>
+      <p class="search-panel__popular">Popular: <a href="../search.html?q=phishing">phishing</a> <a href="../search.html?q=passkey">passkeys</a> <a href="../search.html?q=vpn">VPN</a> <a href="../search.html?q=router">router</a> <a href="../search.html?q=data%20breach">data breach</a></p>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-menu__head"><a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a><button class="icon-btn js-menu-close" type="button" aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <form class="mobile-menu__search" action="../search.html" method="get" role="search"><label class="sr-only" for="mm-q">Search</label><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="mm-q" name="q" type="search" placeholder="Search Hardenwire"></form>
+    <nav aria-label="Mobile">
+      <details class="mm-group"><summary>Cybersecurity <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/cybersecurity.html">All cybersecurity</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/malware.html">Malware</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li></ul></details><details class="mm-group"><summary>Privacy <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/privacy.html">All privacy</a></li><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></details><details class="mm-group"><summary>Online Safety <svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../category/online-safety.html">All online safety</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li></ul></details>
+      <ul class="mm-links">
+        <li><a href="../articles.html">All guides</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../authors.html">Authors</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--accent btn--block" href="../newsletter.html">Get the weekly Briefing</a>
+  </div>
+</div>
+<main id="main">
+
+<div class="progress" aria-hidden="true"><span class="js-progress"></span></div>
+<article class="article">
+  <header class="article-hero container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/vpn.html">VPN</a></li><li aria-current="page">Do you need a VPN?</li></ol></nav>
+    <div class="article-hero__badges"><a class="badge badge--teal " href="../category/vpn.html">VPN</a></div>
+    <h1 class="article-hero__title">Do You Actually Need a VPN? A Straight Answer</h1>
+    <p class="article-hero__dek">VPN marketing promises anonymity and protection from hackers. The reality is narrower but still useful. Here's what a VPN changes about your connection, who genuinely benefits, and how to avoid the services that make things worse.</p>
+    <div class="byline">
+      <span class="avatar" style="--s:44px" aria-hidden="true">LM</span>
+      <div class="byline__who"><a class="byline__name" href="../authors/lena-marsh.html">Lena Marsh</a><span class="byline__role">Privacy Editor</span></div>
+      <dl class="byline__dates">
+        <div><dt>Published</dt><dd><time datetime="2026-10-13">Oct 13, 2026</time></dd></div>
+        <div><dt>Updated</dt><dd><time datetime="2026-11-14">Nov 14, 2026</time></dd></div>
+        <div><dt>Reading time</dt><dd>5 min</dd></div>
+      </dl>
+    </div>
+  </header>
+  <figure class="article-figure container container--wide">
+    <img class="article-figure__img" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="Blue ethernet network cables plugged into a switch" width="1200" height="675" fetchpriority="high" decoding="async">
+    <figcaption>A VPN moves your traffic into an encrypted tunnel, and moves your trust to whoever runs the far end. Photo: <a href="https://unsplash.com/@jouwdan?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">@jouwdan</a> on <a href="https://unsplash.com/?utm_source=hardenwire&amp;utm_medium=referral" rel="noopener" target="_blank">Unsplash</a></figcaption>
+  </figure>
+  <div class="article-layout container container--wide">
+    <aside class="article-layout__rail"><div class="share share--rail" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html&amp;text=Do%20You%20Actually%20Need%20a%20VPN%3F%20A%20Straight%20Answer" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=Do%20You%20Actually%20Need%20a%20VPN%3F%20A%20Straight%20Answer&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/do-you-need-a-vpn.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div></aside>
+    <div class="article-main">
+      <details class="toc toc--inline"><summary><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> On this page</summary><ol><li><a href="#what-a-vpn-actually-does">What a VPN actually does</a></li><li><a href="#what-a-vpn-doesn-t-do">What a VPN doesn't do</a></li><li><a href="#who-genuinely-benefits">Who genuinely benefits</a></li><li><a href="#the-problem-with-free-vpns">The problem with free VPNs</a></li><li><a href="#how-to-choose-one">How to choose one</a></li><li><a href="#cheaper-partial-alternatives">Cheaper partial alternatives</a></li><li><a href="#the-straight-answer">The straight answer</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></details>
+      <aside class="takeaways" aria-labelledby="kt">
+        <h2 class="takeaways__title" id="kt">Key takeaways</h2>
+        <ul><li>A VPN hides your traffic from the local network and your internet provider, and hides your IP address from the sites you visit.</li><li>Using a VPN means trusting the provider instead, because they can see what your ISP used to see.</li><li>It does not stop phishing, malware, account-based tracking by Google or Meta, or most browser fingerprinting.</li><li>Avoid free VPNs that make money from your data. Look for independent audits, a clear business model, and modern protocols.</li></ul>
+      </aside>
+      <div class="prose">
+<p>If you've watched a YouTube video or a podcast in the last few years, you've heard a VPN advert. Many imply that without one, hackers are watching your every move and your identity is up for grabs. It's a profitable message, and it explains why so much VPN "advice" online comes from sites earning a commission on every sign-up.</p>
+
+<p>We don't take affiliate fees, so here's the answer without the sales pitch: <strong>a VPN is a useful privacy tool for specific situations, and an unnecessary expense in many others.</strong> Whether you need one depends on what you're trying to protect, and from whom.</p>
+
+<h2 id="what-a-vpn-actually-does">What a VPN actually does</h2>
+
+<p>Normally, your device connects to websites through whatever network you're on (home broadband, a café, a hotel) and then through your internet service provider (ISP). With a VPN, your device first builds an encrypted tunnel to a server run by the VPN company. All your traffic travels inside that tunnel, and leaves onto the internet from the VPN server.</p>
+
+<p>That causes three changes:</p>
+
+<ul>
+  <li><strong>The local network and your ISP can no longer see where you're going.</strong> They see an encrypted connection to a VPN server and nothing more.</li>
+  <li><strong>Websites see the VPN server's IP address instead of yours.</strong> This hides your approximate location and makes it harder to link visits by IP.</li>
+  <li><strong>The VPN provider can now see what your ISP used to see.</strong> This is the part adverts leave out. You haven't removed the observer. You've chosen a different one.</li>
+</ul>
+
+<div class="callout callout--info"><p><strong>The core trade-off</strong>A VPN doesn't remove trust from the equation. It moves it. Using one makes sense when you trust the VPN provider more than the network or ISP you'd otherwise be exposed to.</p></div>
+
+<h2 id="what-a-vpn-doesn-t-do">What a VPN doesn't do</h2>
+
+<p>This list matters more than the first one, because it covers the threats that cause most real harm:</p>
+
+<div class="table-wrap" tabindex="0"><table>
+  <thead><tr><th>Threat</th><th>Does a VPN help?</th><th>What actually helps</th></tr></thead>
+  <tbody>
+    <tr><td>Phishing emails and fake login pages</td><td>No</td><td><a href="../articles/passkeys-explained.html">Passkeys</a>, a password manager, <a href="../articles/how-to-spot-a-phishing-email.html">recognising lures</a></td></tr>
+    <tr><td>Malware and malicious downloads</td><td>No (a few VPNs block known bad domains, which is a minor help)</td><td>Updates, trusted app stores, caution with attachments</td></tr>
+    <tr><td>Tracking by Google, Meta and other accounts</td><td>No. They know it's you because you're signed in</td><td>Account privacy settings, fewer signed-in services</td></tr>
+    <tr><td>Cookies and browser fingerprinting</td><td>Very little</td><td><a href="../articles/browser-privacy-settings.html">Browser privacy settings</a>, tracker blockers</td></tr>
+    <tr><td>Data breaches at companies you use</td><td>No</td><td>Unique passwords, 2FA, credit freezes</td></tr>
+    <tr><td>Snooping on the local Wi-Fi</td><td>Yes</td><td>VPN, or mobile data</td></tr>
+    <tr><td>ISP logging or selling browsing data</td><td>Yes</td><td>VPN, or encrypted DNS for partial protection</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="who-genuinely-benefits">Who genuinely benefits</h2>
+
+<h3 id="you-probably-want-one-if">You probably want one if…</h3>
+<ul>
+  <li><strong>You regularly use networks you don't trust:</strong> hotels, airports, conferences, shared accommodation. See our guide to <a href="../articles/public-wifi-safety.html">public Wi-Fi risks</a> for what a VPN does and doesn't add there.</li>
+  <li><strong>You don't want your ISP to see your browsing.</strong> In some countries ISPs may log or sell browsing data, or are required to retain it.</li>
+  <li><strong>You're in a country that censors or heavily surveils the internet,</strong> keeping local laws and your personal risk in mind.</li>
+  <li><strong>You want to hide your IP address from the sites you visit,</strong> for example if you're researching something sensitive or have reason to keep your location private.</li>
+  <li><strong>Your employer requires one</strong> to reach work systems. That's a corporate VPN, which is a different product with a different purpose.</li>
+</ul>
+
+<h3 id="you-can-probably-skip-it-if">You can probably skip it if…</h3>
+<ul>
+  <li>You mostly browse at home on your own network with an ISP you're comfortable with.</li>
+  <li>Your main worry is "hackers". Your money and effort are better spent on passkeys, a password manager and updates.</li>
+  <li>You were hoping for anonymity. A VPN alone doesn't provide it.</li>
+</ul>
+
+<h2 id="the-problem-with-free-vpns">The problem with free VPNs</h2>
+
+<p>Running a VPN costs real money: servers, bandwidth and staff. A service that charges nothing has to pay for itself somehow, and the methods aren't always visible. Researchers and journalists have repeatedly found free VPN apps that log and sell browsing data, inject advertising, request excessive permissions, or fail to encrypt traffic properly. In other words, some free VPNs do the very thing you installed a VPN to prevent.</p>
+
+<p>There are honest exceptions, usually limited free tiers from paid providers, or tools from non-profits. If a free VPN can't clearly explain how it makes money, assume the answer is your data.</p>
+
+<h2 id="how-to-choose-one">How to choose one</h2>
+
+<ol class="steps">
+  <li><strong>Look for independent audits.</strong> Reputable providers commission outside security firms to audit their no-logging claims and apps, and publish the results. A no-logs promise without an audit is just marketing.</li>
+  <li><strong>Check the business model and ownership.</strong> You should be able to find out who runs the company and how it earns money.</li>
+  <li><strong>Prefer modern protocols.</strong> WireGuard and OpenVPN are well-studied. Avoid services that rely on PPTP or obscure proprietary protocols.</li>
+  <li><strong>Make sure it has a kill switch,</strong> which blocks traffic if the VPN connection drops so your real IP isn't exposed.</li>
+  <li><strong>Read the permissions on mobile.</strong> A VPN app has no reason to need your contacts or photos.</li>
+  <li><strong>Ignore "military-grade encryption" claims.</strong> Every competent VPN uses standard strong encryption. It's a marketing phrase, not a feature.</li>
+</ol>
+
+<h2 id="cheaper-partial-alternatives">Cheaper partial alternatives</h2>
+
+<p>If you mainly want to stop your ISP or the local network seeing which sites you visit, <strong>encrypted DNS</strong> (DNS over HTTPS, often labelled "Use secure DNS" in browser settings) hides your DNS lookups at no cost. It isn't a full VPN, because the network can still see the IP addresses you connect to, but it closes one of the easier leaks. Apple's iCloud+ Private Relay is another option for Safari users. It splits trust between two separate operators, though it only covers some traffic.</p>
+
+<h2 id="the-straight-answer">The straight answer</h2>
+
+<p>A VPN is a privacy tool, not a security cure-all. If you travel, use untrusted networks often, or want privacy from your ISP, a reputable paid VPN is worth the money. If you don't, you'll get far more protection from the free basics: passkeys, two-factor authentication, updates and a few <a href="../articles/browser-privacy-settings.html">browser settings</a>. And if your worry is how much of you is already out there, a VPN won't touch that. Our <a href="../articles/reduce-your-digital-footprint.html">digital footprint guide</a> will.</p>
+
+      </div>
+      <section class="faq" aria-labelledby="faq"><h2 id="faq">Frequently asked questions</h2><details class="faq__item" open><summary><h3>Does a VPN make me anonymous?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>No. It hides your IP address from websites and your browsing from your internet provider, but you're still identifiable when you sign in to accounts, through cookies, and through browser fingerprinting. The VPN provider can also see your traffic metadata. Anonymity requires much more, such as the Tor Browser and careful habits.</p></div></details><details class="faq__item"><summary><h3>Does a VPN protect me from hackers?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>Only from one kind: people trying to snoop or tamper on the local network you're connected to. It does nothing about phishing emails, malicious downloads, weak or reused passwords, or vulnerabilities on your device, which together account for most real-world compromises.</p></div></details><details class="faq__item"><summary><h3>Should I leave my VPN on all the time?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>If you've chosen a VPN for privacy from your internet provider, yes, because that's the point. If you mainly use it on public Wi-Fi, turning it on automatically for untrusted networks is a sensible middle ground. Some banking and streaming services block VPN traffic, so you may need to pause it occasionally.</p></div></details><details class="faq__item"><summary><h3>Are VPNs legal?</h3><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq__a"><p>In most countries, including the US, UK, Canada, Australia and the EU, using a VPN is legal. A handful of countries restrict or ban unapproved VPNs. Using a VPN doesn't make illegal activity legal, and streaming services' terms often forbid using one to change region.</p></div></details></section>
+      <section class="sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://ssd.eff.org/module/choosing-vpn-thats-right-you" rel="noopener" target="_blank">EFF Surveillance Self-Defense: Choosing the VPN that's right for you</a></li><li><a href="https://consumer.ftc.gov/articles/virtual-private-network-vpn-apps-mobile-devices" rel="noopener" target="_blank">FTC: Virtual Private Network (VPN) apps on mobile devices</a></li><li><a href="https://www.wireguard.com/" rel="noopener" target="_blank">WireGuard protocol</a></li></ol><p class="sources__note">Menu names and settings change between software versions. We review this guide regularly; see our <a href="../corrections-policy.html">corrections policy</a> if you spot something out of date.</p></section>
+      <div class="article-tags"><span>Topics:</span><a class="tag" href="../search.html?q=VPN">VPN</a><a class="tag" href="../search.html?q=privacy">privacy</a><a class="tag" href="../search.html?q=public%20Wi-Fi">public Wi-Fi</a><a class="tag" href="../search.html?q=ISP%20tracking">ISP tracking</a><a class="tag" href="../search.html?q=encryption">encryption</a><a class="tag" href="../search.html?q=free%20VPN">free VPN</a></div>
+      <div class="share share--inline" aria-label="Share this article">
+  <span class="share__label">Share</span>
+  <a class="share__btn" href="https://x.com/intent/post?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html&amp;text=Do%20You%20Actually%20Need%20a%20VPN%3F%20A%20Straight%20Answer" target="_blank" rel="noopener" aria-label="Share on X"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+  <a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg></a>
+  <a class="share__btn" href="mailto:?subject=Do%20You%20Actually%20Need%20a%20VPN%3F%20A%20Straight%20Answer&amp;body=https%3A%2F%2Fhardenwire.com%2Farticles%2Fdo-you-need-a-vpn.html" aria-label="Share by email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  <button class="share__btn js-copy-link" type="button" aria-label="Copy link" data-url="https://hardenwire.com/articles/do-you-need-a-vpn.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></button>
+</div>
+      <aside class="author-box">
+        <span class="avatar" style="--s:64px" aria-hidden="true">LM</span>
+        <div><p class="kicker">Written by</p><h2 class="author-box__name"><a href="../authors/lena-marsh.html">Lena Marsh</a></h2><p class="author-box__role">Privacy Editor</p><p>Lena leads privacy coverage, from browser tracking and data brokers to VPNs and app permissions. Her focus is proportionate privacy: the handful of changes that remove the most exposure without making technology miserable to use.</p></div>
+      </aside>
+      <p class="review-note"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/></svg><span>Reviewed under the Hardenwire <a href="../editorial-policy.html">editorial policy</a>. We don't accept payment for coverage, and this guide contains no affiliate links.</span></p>
+      <nav class="prevnext" aria-label="More articles">
+        <a class="prevnext__link prevnext__link--prev" href="../articles/two-factor-authentication-methods.html"><span><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Previous</span><strong>Two-Factor Authentication Methods, Ranked From Weakest to Strongest</strong></a>
+        <a class="prevnext__link prevnext__link--next" href="../articles/public-wifi-safety.html"><span>Next <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Is Public Wi-Fi Safe? What the Real Risks Are Now</strong></a>
+      </nav>
+    </div>
+    <aside class="article-layout__toc"><nav class="toc toc--rail js-toc" aria-label="On this page"><p class="toc__title">On this page</p><ol><li><a href="#what-a-vpn-actually-does">What a VPN actually does</a></li><li><a href="#what-a-vpn-doesn-t-do">What a VPN doesn't do</a></li><li><a href="#who-genuinely-benefits">Who genuinely benefits</a></li><li><a href="#the-problem-with-free-vpns">The problem with free VPNs</a></li><li><a href="#how-to-choose-one">How to choose one</a></li><li><a href="#cheaper-partial-alternatives">Cheaper partial alternatives</a></li><li><a href="#the-straight-answer">The straight answer</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></aside>
+  </div>
+</article>
+<section class="section section--tint">
+  <div class="container">
+    <header class="section-head"><h2 class="section-head__title">Keep reading</h2><a class="section-head__link" href="../category/vpn.html">More in VPN <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></header>
+    <div class="grid grid--3"><article class="card card--default" data-cats="online-safety network-security vpn" data-tags="public Wi-Fi|Wi-Fi|travel security|evil twin|HTTPS|VPN" data-date="2026-10-20" data-updated="2026-10-20" data-pop="700" data-read="5">
+  <a class="card__media" href="../articles/public-wifi-safety.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1545184180-25d471fe75eb?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A man working on a laptop with a coffee in a cafe" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--amber " href="../category/online-safety.html">Online Safety</a>
+    <h3 class="card__title"><a href="../articles/public-wifi-safety.html">Is Public Wi-Fi Safe? What the Real Risks Are Now</a></h3>
+    <p class="card__dek">The coffee-shop hacker stealing your bank password is mostly a story from an older internet. Public Wi-Fi still carries risks, though. They're just different from the ones you've been warned about.</p>
+    <p class="meta"><span class="meta__author">Tomás Vidal</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-10-20">Oct 20, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>5 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="network-security" data-tags="router security|Wi-Fi|WPA3|home network|firmware|smart home" data-date="2026-09-15" data-updated="2026-11-12" data-pop="820" data-read="6">
+  <a class="card__media" href="../articles/secure-your-home-router.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A white home Wi-Fi router standing on a white table" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--teal " href="../category/network-security.html">Network Security</a>
+    <h3 class="card__title"><a href="../articles/secure-your-home-router.html">How to Secure Your Home Router: A 10-Step Checklist</a></h3>
+    <p class="card__dek">Your router is the front door for every device you own, and most have never been touched since installation. This checklist takes about 30 minutes and needs no technical background.</p>
+    <p class="meta"><span class="meta__author">Tomás Vidal</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-12">Nov 12, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>6 min read</span></p>
+  </div>
+</article><article class="card card--default" data-cats="data-privacy identity-protection" data-tags="digital footprint|data brokers|privacy|social media privacy|email aliases|people search" data-date="2026-11-06" data-updated="2026-11-06" data-pop="690" data-read="5">
+  <a class="card__media" href="../articles/reduce-your-digital-footprint.html" tabindex="-1" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1546402500-a0a8235ee68b?auto=format&fit=crop&w=1200&h=675&q=80" srcset="https://images.unsplash.com/photo-1546402500-a0a8235ee68b?auto=format&fit=crop&w=480&h=270&q=80 480w, https://images.unsplash.com/photo-1546402500-a0a8235ee68b?auto=format&fit=crop&w=800&h=450&q=80 800w, https://images.unsplash.com/photo-1546402500-a0a8235ee68b?auto=format&fit=crop&w=1200&h=675&q=80 1200w, https://images.unsplash.com/photo-1546402500-a0a8235ee68b?auto=format&fit=crop&w=1600&h=900&q=80 1600w" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 60vw, 820px" alt="A man using his phone on a busy city street" width="1200" height="675" loading="lazy" decoding="async"></a>
+  <div class="card__body">
+    <a class="badge badge--plum " href="../category/data-privacy.html">Data Privacy</a>
+    <h3 class="card__title"><a href="../articles/reduce-your-digital-footprint.html">How to Reduce Your Digital Footprint: A Weekend Plan</a></h3>
+    <p class="card__dek">You can't erase yourself from the internet, but you can shrink what a stranger, scammer or data broker can find about you. This plan splits the work into four sessions you can finish over a weekend.</p>
+    <p class="meta"><span class="meta__author">Lena Marsh</span><span class="meta__dot" aria-hidden="true"></span><time datetime="2026-11-06">Nov 6, 2026</time><span class="meta__dot" aria-hidden="true"></span><span>5 min read</span></p>
+  </div>
+</article></div>
+  </div>
+</section>
+<div class="container section">
+<section class="newsletter newsletter--card" aria-labelledby="nl-art-title">
+  <div class="newsletter__inner">
+    <div class="newsletter__copy">
+      <p class="kicker">Free weekly newsletter</p>
+      <h2 class="newsletter__title" id="nl-art-title">Get guides like this every Thursday</h2>
+      <p>One email every Thursday: the scams going around, the settings worth changing, and one guide worth your time. No sponsors and no tracking pixels.</p>
+    </div>
+    <form class="newsletter__form js-subscribe" novalidate>
+      <label class="sr-only" for="nl-art-email">Email address</label>
+      <div class="field-row">
+        <input id="nl-art-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn btn--accent" type="submit">Subscribe</button>
+      </div>
+      <p class="form-note" role="status" aria-live="polite">Unsubscribe in one click. Read our <a href="../privacy-policy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</section></div>
+<div class="mobile-bar" aria-label="Article tools">
+  <button class="mobile-bar__btn js-toc-sheet" type="button"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> Contents</button>
+  <span class="mobile-bar__time"><svg class="icon icon--sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 5 min</span>
+  <button class="mobile-bar__btn js-native-share" type="button" data-title="Do You Actually Need a VPN? A Straight Answer" data-url="https://hardenwire.com/articles/do-you-need-a-vpn.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg> Share</button>
+</div>
+<div class="sheet" id="toc-sheet" hidden><div class="sheet__panel" role="dialog" aria-modal="true" aria-label="Contents"><div class="sheet__head"><p class="toc__title">On this page</p><button class="icon-btn js-sheet-close" type="button" aria-label="Close contents"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><nav class="toc"><ol><li><a href="#what-a-vpn-actually-does">What a VPN actually does</a></li><li><a href="#what-a-vpn-doesn-t-do">What a VPN doesn't do</a></li><li><a href="#who-genuinely-benefits">Who genuinely benefits</a></li><li><a href="#the-problem-with-free-vpns">The problem with free VPNs</a></li><li><a href="#how-to-choose-one">How to choose one</a></li><li><a href="#cheaper-partial-alternatives">Cheaper partial alternatives</a></li><li><a href="#the-straight-answer">The straight answer</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav></div></div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="logo" href="../index.html" aria-label="Hardenwire home"><svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--c-ink)"/><path d="M10 8v16M19 8v16" stroke="var(--c-paper)" stroke-width="3.2" stroke-linecap="round"/><path d="M10 16h9" stroke="var(--c-paper)" stroke-width="3.2"/><path d="M19 16h4.5l1.5-2.5" stroke="var(--c-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo__word">Harden<span>wire</span></span></a>
+        <p>Hardenwire is an independent publication covering cybersecurity, privacy and online safety, with practical guides and plain-English explainers you can act on.</p>
+        <a class="btn btn--outline-light btn--sm" href="../newsletter.html"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Subscribe to the Briefing</a>
+      </div>
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div><h2 class="site-footer__h">Topics</h2><ul><li><a href="../category/cybersecurity.html">Cybersecurity</a></li><li><a href="../category/privacy.html">Privacy</a></li><li><a href="../category/online-safety.html">Online Safety</a></li><li><a href="../category/password-security.html">Password Security</a></li><li><a href="../category/phishing.html">Phishing &amp; Scams</a></li><li><a href="../category/malware.html">Malware</a></li></ul></div>
+        <div><h2 class="site-footer__h">More topics</h2><ul><li><a href="../category/vpn.html">VPN</a></li><li><a href="../category/browser-security.html">Browser Security</a></li><li><a href="../category/mobile-security.html">Mobile Security</a></li><li><a href="../category/network-security.html">Network Security</a></li><li><a href="../category/data-privacy.html">Data Privacy</a></li><li><a href="../category/identity-protection.html">Identity Protection</a></li></ul></div>
+        <div><h2 class="site-footer__h">Popular guides</h2><ul><li><a href="../articles/how-to-spot-a-phishing-email.html">Spotting phishing emails</a></li><li><a href="../articles/passkeys-explained.html">Passkeys, explained</a></li><li><a href="../articles/do-you-need-a-vpn.html">Do you need a VPN?</a></li><li><a href="../articles/what-to-do-after-a-data-breach.html">What to do after a data breach</a></li><li><a href="../articles/secure-your-home-router.html">Securing your router</a></li></ul></div>
+        <div><h2 class="site-footer__h">Publication</h2><ul>
+          <li><a href="../about.html">About</a></li><li><a href="../authors.html">Authors</a></li><li><a href="../editorial-policy.html">Editorial policy</a></li><li><a href="../corrections-policy.html">Corrections</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Hardenwire. Independent security &amp; privacy journalism.</p>
+      <ul><li><a href="../privacy-policy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../directory.html">Directory</a></li><li><a href="../sitemap.xml">Sitemap</a></li></ul>
+    </div>
+  </div>
+</footer>
+<script src="../js/articles-data.js" defer></script>
+<script src="../js/articles.js" defer></script>
+<script src="../js/main.js" defer></script>
+
+</body>
+</html>
