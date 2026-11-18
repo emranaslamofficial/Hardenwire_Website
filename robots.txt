@@ -1,0 +1,11 @@
+# Hardenwire
+User-agent: *
+Allow: /
+Disallow: /_build/
+Disallow: /content/
+Disallow: /docs/
+Disallow: /data/
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://hardenwire.com/sitemap.xml

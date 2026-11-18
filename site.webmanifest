@@ -1,0 +1,15 @@
+{
+  "name": "Hardenwire",
+  "short_name": "Hardenwire",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f1c2e",
+  "icons": [
+    {
+      "src": "/assets/icons/logo-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
