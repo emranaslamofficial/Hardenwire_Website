@@ -23,12 +23,30 @@ import { spawn } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
-const DATA = path.join(ROOT, 'data');
-const ARTICLES = path.join(ROOT, 'content', 'articles');
 const PORT = Number(process.env.PORT) || 3000;
 const { CATEGORIES, AUTHORS, FONT_PRESETS } = await import(pathToFileURL(path.join(ROOT, '_build', 'data.mjs')).href);
 
+// Local mode (default): everything lives in the project folder.
+// Production mode (DATA_DIR set, e.g. a Render persistent disk): posts, the
+// generated site and all stored data live on the disk, so admin edits and
+// subscribers survive restarts and redeploys.
+const PROD = !!process.env.DATA_DIR;
+const DATA = process.env.DATA_DIR || path.join(ROOT, 'data');
+const CONTENT = PROD ? path.join(DATA, 'content') : path.join(ROOT, 'content');
+const OUT = PROD ? path.join(DATA, 'site') : ROOT;
+const ARTICLES = path.join(CONTENT, 'articles');
+const TRUST_PROXY = process.env.TRUST_PROXY === '1' || PROD;
+const BUILD_ENV = { ...process.env, HW_CONTENT_DIR: CONTENT, HW_OUT_DIR: OUT, DATA_DIR: DATA };
+
 fs.mkdirSync(DATA, { recursive: true });
+if (PROD) {
+  // First boot on a new disk: copy the articles and pages from the repo.
+  for (const sub of ['articles', 'pages']) {
+    const dest = path.join(CONTENT, sub);
+    if (!fs.existsSync(dest)) fs.cpSync(path.join(ROOT, 'content', sub), dest, { recursive: true });
+  }
+  fs.mkdirSync(OUT, { recursive: true });
+}
 
 // ---------- JSON storage ----------
 const file = (name) => path.join(DATA, name + '.json');
@@ -45,9 +63,15 @@ function save(name, value) {
 const hashPw = (pw, salt) => crypto.scryptSync(pw, salt, 64).toString('hex');
 function ensureAdmin() {
   const existing = load('admin', null);
-  if (process.env.ADMIN_PASSWORD) {
-    const salt = crypto.randomBytes(16).toString('hex');
-    save('admin', { salt, hash: hashPw(process.env.ADMIN_PASSWORD, salt) });
+  const envPw = process.env.ADMIN_PASSWORD;
+  if (envPw) {
+    // Apply ADMIN_PASSWORD only when it is new or has changed, so a password
+    // changed later in the admin panel isn't overwritten on every restart.
+    const fp = crypto.createHash('sha256').update(envPw).digest('hex');
+    if (!existing || existing.envFp !== fp) {
+      const salt = crypto.randomBytes(16).toString('hex');
+      save('admin', { salt, hash: hashPw(envPw, salt), envFp: fp });
+    }
     return;
   }
   if (existing) return;
@@ -93,7 +117,10 @@ function limited(key, max, windowMs) {
   hits.set(key, list);
   return list.length > max;
 }
-const ipOf = (req) => req.socket.remoteAddress || 'unknown';
+// Behind a hosting proxy (Render, etc.) the real client IP is the first X-Forwarded-For entry.
+const ipOf = (req) => (TRUST_PROXY && String(req.headers['x-forwarded-for'] || '').split(',')[0].trim()) || req.socket.remoteAddress || 'unknown';
+const isHttps = (req) => (TRUST_PROXY && req.headers['x-forwarded-proto'] === 'https') || !!req.socket.encrypted;
+const cookie = (req, value, maxAge) => `hw_admin=${value}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${maxAge}${isHttps(req) ? '; Secure' : ''}`;
 
 // ---------- Helpers ----------
 const SEC_HEADERS = { 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin' };
@@ -173,7 +200,7 @@ function cleanPost(input, existing = {}) {
 let buildChain = Promise.resolve();
 function rebuild() {
   const run = () => new Promise((resolve) => {
-    const p = spawn(process.execPath, [path.join(ROOT, '_build', 'build.mjs')], { cwd: ROOT });
+    const p = spawn(process.execPath, [path.join(ROOT, '_build', 'build.mjs')], { cwd: ROOT, env: BUILD_ENV });
     let out = '';
     p.stdout.on('data', (d) => (out += d));
     p.stderr.on('data', (d) => (out += d));
@@ -241,11 +268,11 @@ async function api(req, res, url) {
     const b = await readBody(req, 5_000);
     if (!checkPw(b.password)) return send(res, 401, { error: 'Wrong password.' });
     const t = newSession();
-    return send(res, 200, { ok: true }, { 'Set-Cookie': `hw_admin=${t}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${SESSION_MS / 1000}` });
+    return send(res, 200, { ok: true }, { 'Set-Cookie': cookie(req, t, SESSION_MS / 1000) });
   }
   if (p === '/api/admin/logout' && req.method === 'POST') {
     sessions.delete(getCookie(req, 'hw_admin'));
-    return send(res, 200, { ok: true }, { 'Set-Cookie': 'hw_admin=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0' });
+    return send(res, 200, { ok: true }, { 'Set-Cookie': cookie(req, '', 0) });
   }
 
   if (!isAuthed(req)) return send(res, 401, { error: 'Please log in.' });
@@ -293,7 +320,7 @@ async function api(req, res, url) {
       fs.unlinkSync(f);
       const r = await rebuild();
       if (!r.ok) { fs.writeFileSync(f, backup); await rebuild(); return send(res, 400, { error: 'Other posts link to this one. Remove those links first.', log: r.log }); }
-      for (const gen of [path.join(ROOT, 'articles', slug + '.html'), path.join(ROOT, 'assets', 'images', 'articles', slug + '.svg')]) { try { fs.unlinkSync(gen); } catch {} }
+      for (const gen of [path.join(OUT, 'articles', slug + '.html'), path.join(OUT, 'assets', 'images', 'articles', slug + '.svg')]) { try { fs.unlinkSync(gen); } catch {} }
       return send(res, 200, { ok: true });
     }
   }
@@ -338,7 +365,7 @@ async function api(req, res, url) {
     if (!checkPw(b.current)) return send(res, 400, { error: 'Current password is wrong.' });
     if (typeof b.next !== 'string' || b.next.length < 10) return send(res, 400, { error: 'New password must be at least 10 characters.' });
     const salt = crypto.randomBytes(16).toString('hex');
-    save('admin', { salt, hash: hashPw(b.next, salt) });
+    save('admin', { ...load('admin', {}), salt, hash: hashPw(b.next, salt) }); // keeps envFp so a restart won't reset it
     try { fs.unlinkSync(path.join(DATA, 'admin-password.txt')); } catch {}
     return send(res, 200, { ok: true });
   }
@@ -356,36 +383,55 @@ const BLOCKED = /^\/(data|_build|content|docs|\.claude|node_modules)(\/|$)|^\/se
 function serveStatic(req, res, url) {
   let p = decodeURIComponent(url.pathname);
   if (BLOCKED.test(p)) return send(res, 404, 'Not found');
-  if (p === '/admin' ) { res.writeHead(301, { Location: '/admin/' }); return res.end(); }
+  if (p === '/admin') { res.writeHead(301, { Location: '/admin/' }); return res.end(); }
   if (p.endsWith('/')) p += 'index.html';
-  const f = path.normalize(path.join(ROOT, p));
-  if (!f.startsWith(ROOT + path.sep)) return send(res, 403, 'Forbidden');
-  const ext = path.extname(f).toLowerCase();
-  fs.stat(f, (err, st) => {
-    if (err || !st.isFile() || !TYPES[ext]) {
-      const nf = path.join(ROOT, '404.html');
+  const ext = path.extname(p).toLowerCase();
+  // Generated pages come from OUT (the disk in production); CSS, JS, icons
+  // and the admin panel come from the repo.
+  const candidates = [...new Set([OUT, ROOT])].map((base) => {
+    const f = path.normalize(path.join(base, p));
+    return f.startsWith(base + path.sep) ? f : null;
+  }).filter(Boolean);
+  if (!candidates.length) return send(res, 403, 'Forbidden');
+  const tryNext = (i) => {
+    if (i >= candidates.length || !TYPES[ext]) {
+      const nf = [path.join(OUT, '404.html'), path.join(ROOT, '404.html')].find((x) => fs.existsSync(x));
       res.writeHead(404, { ...SEC_HEADERS, 'Content-Type': TYPES['.html'] });
-      return fs.createReadStream(nf).on('error', () => res.end('Not found')).pipe(res);
+      return nf ? fs.createReadStream(nf).pipe(res) : res.end('Not found');
     }
-    const headers = { ...SEC_HEADERS, 'Content-Type': TYPES[ext], 'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=300' };
-    if (p.startsWith('/admin/')) { headers['X-Frame-Options'] = 'DENY'; headers['Cache-Control'] = 'no-store'; }
-    res.writeHead(200, headers);
-    fs.createReadStream(f).pipe(res);
-  });
+    fs.stat(candidates[i], (err, st) => {
+      if (err || !st.isFile()) return tryNext(i + 1);
+      const headers = { ...SEC_HEADERS, 'Content-Type': TYPES[ext], 'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=300' };
+      if (p.startsWith('/admin/')) { headers['X-Frame-Options'] = 'DENY'; headers['Cache-Control'] = 'no-store'; }
+      if (isHttps(req)) headers['Strict-Transport-Security'] = 'max-age=31536000';
+      res.writeHead(200, headers);
+      if (req.method === 'HEAD') return res.end();
+      fs.createReadStream(candidates[i]).pipe(res);
+    });
+  };
+  tryNext(0);
 }
 
 // ---------- Server ----------
-http.createServer(async (req, res) => {
-  const url = new URL(req.url, 'http://localhost');
+const server = http.createServer(async (req, res) => {
   try {
+    const url = new URL(req.url, 'http://localhost');
+    if (url.pathname === '/healthz') return send(res, 200, { ok: true });
     if (url.pathname.startsWith('/api/')) return await api(req, res, url);
     if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, 'Method not allowed');
     serveStatic(req, res, url);
   } catch (e) {
-    send(res, e.status || 500, { error: e.status ? e.message : 'Server error' });
-    if (!e.status) console.error(e);
+    send(res, e.status || 400, { error: e.status ? e.message : 'Bad request' });
+    if (!e.status && !(e instanceof URIError)) console.error(e);
   }
-}).listen(PORT, () => {
-  console.log(`Hardenwire running at http://localhost:${PORT}`);
-  console.log(`Admin panel:          http://localhost:${PORT}/admin/`);
+});
+
+// In production, build the site onto the disk before accepting traffic.
+const boot = PROD ? rebuild() : Promise.resolve({ ok: true });
+boot.then((r) => {
+  if (!r.ok) console.error('Initial build failed:\n' + r.log);
+  server.listen(PORT, () => {
+    console.log(`Hardenwire running at http://localhost:${PORT}${PROD ? ' (production, data in ' + DATA + ')' : ''}`);
+    console.log(`Admin panel:          http://localhost:${PORT}/admin/`);
+  });
 });

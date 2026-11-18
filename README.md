@@ -211,6 +211,39 @@ illustration.
 | Templates | `_build/templates.mjs` | Each function maps 1:1 to a WordPress or PHP partial if you migrate |
 | Hosting | `node server.mjs` | Any Node host (Render, Railway, Fly.io, a VPS) behind HTTPS. Static-only hosting works for the site, but the forms and admin need the Node server |
 
+## 10. Going live with the admin panel (Render)
+
+Vercel (and any static host) serves the pages only, so forms and `/admin`
+need the Node server. `render.yaml` sets this up on **Render** in one go:
+
+1. Open **https://render.com/deploy?repo=https://github.com/emranaslamofficial/Hardenwire_Website**
+   and sign in with GitHub.
+2. Render reads `render.yaml` and asks for **ADMIN_PASSWORD**. Choose a long,
+   unique password (16+ characters). This is your admin login.
+3. Click **Apply**. The first deploy takes 2–3 minutes. Your site is then
+   at `https://hardenwire.onrender.com` (or a similar name), and the admin
+   panel at `/admin/`.
+
+**Cost:** a persistent disk needs a paid instance: Starter (about $7/month)
+plus the disk (about $0.25/GB per month, and 1 GB is plenty). Check
+current prices on render.com/pricing. Without a disk, subscribers, messages
+and admin edits would be wiped on every restart.
+
+**How production mode works:** `DATA_DIR=/var/data` makes the server keep
+everything on the disk: `content/` (posts), `site/` (generated pages),
+`subscribers.json`, `messages.json`, `settings.json` and `admin.json`. On first
+boot it copies the articles from the repo onto the disk. After that, **the
+disk is the source of truth.** Edit posts in the admin panel; pushing article
+changes to GitHub won't overwrite posts on the disk. CSS, JS and admin-panel
+code still come from GitHub, so design changes deploy with a normal `git push`.
+
+**Password:** a password changed in the admin panel survives restarts.
+Changing `ADMIN_PASSWORD` in Render's dashboard resets it to the new value.
+
+**Custom domain:** in Render → Settings → Custom Domains, add
+`hardenwire.com` and follow the DNS instructions. HTTPS is automatic.
+Once the domain points to Render, the Vercel project can be deleted.
+
 ## Before launch: checklist
 
 - [ ] Register **hardenwire.com** and run a trademark search.

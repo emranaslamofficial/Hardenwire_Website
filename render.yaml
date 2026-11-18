@@ -1,0 +1,23 @@
+# Render Blueprint: one web service running server.mjs with a persistent
+# disk for posts, subscribers, messages and settings.
+# Deploy: https://render.com/deploy?repo=https://github.com/emranaslamofficial/Hardenwire_Website
+services:
+  - type: web
+    name: hardenwire
+    runtime: node
+    plan: starter            # persistent disks need a paid instance
+    region: frankfurt
+    buildCommand: echo "No build step needed"
+    startCommand: node server.mjs
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATA_DIR        # turns on production mode: all data lives on the disk
+        value: /var/data
+      - key: ADMIN_PASSWORD  # Render asks you for this during setup; it is never stored in the repo
+        sync: false
+    disk:
+      name: hardenwire-data
+      mountPath: /var/data
+      sizeGB: 1

@@ -14,13 +14,17 @@ import * as T from './templates.mjs';
 const { esc, fmtDate, rel, icon, card, badge, meta, img, imageUrl, credit, numberedList, sectionHead, breadcrumb, breadcrumbSchema, avatar, newsletterBox, layout, logoMark } = T;
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const out = (p, s) => { const f = path.join(ROOT, p); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, s); };
+// Paths can be moved (e.g. onto a persistent disk in production) with env vars.
+const CONTENT = process.env.HW_CONTENT_DIR || path.join(ROOT, 'content');
+const OUT = process.env.HW_OUT_DIR || ROOT;
+const DATA_DIR = process.env.DATA_DIR || path.join(ROOT, 'data');
+const out = (p, s) => { const f = path.join(OUT, p); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, s); };
 const slugify = (s) => s.toLowerCase().replace(/&[a-z]+;/g, '').replace(/<[^>]+>/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 const words = (html) => html.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
 
 // Site settings saved by the admin panel (data/settings.json). Optional.
 const SETTINGS = (() => {
-  try { return { fontPreset: 'editorial', ...JSON.parse(fs.readFileSync(path.join(ROOT, 'data/settings.json'), 'utf8')) }; }
+  try { return { fontPreset: 'editorial', ...JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'settings.json'), 'utf8')) }; }
   catch { return { fontPreset: 'editorial' }; }
 })();
 
@@ -32,8 +36,8 @@ function parseFile(file) {
   return { meta: JSON.parse(m[1]), body: m[2] };
 }
 
-const articles = fs.readdirSync(path.join(ROOT, 'content/articles')).filter((f) => f.endsWith('.html')).map((f) => {
-  const { meta: a, body } = parseFile(path.join(ROOT, 'content/articles', f));
+const articles = fs.readdirSync(path.join(CONTENT, 'articles')).filter((f) => f.endsWith('.html')).map((f) => {
+  const { meta: a, body } = parseFile(path.join(CONTENT, 'articles', f));
   a.body = body;
   a.also = a.also || [];
   // Defaults so posts created in the admin panel only need the essentials
@@ -574,7 +578,7 @@ function contactPage() {
 
 // ---------- STATIC PROSE PAGES (content/pages) ----------
 function prosePage(file) {
-  const { meta: m, body } = parseFile(path.join(ROOT, 'content/pages', file));
+  const { meta: m, body } = parseFile(path.join(CONTENT, 'pages', file));
   const r = rel(0);
   const { html } = processBody(body, r);
   const crumbs = [{ name: 'Home', href: 'index.html' }, { name: m.title, href: m.path }];
@@ -666,7 +670,7 @@ AUTHORS.forEach((a) => write(`authors/${a.slug}.html`, authorPage(a), '0.4'));
 write('resources.html', resourcesPage(), '0.7');
 write('newsletter.html', newsletterPage(), '0.5');
 write('contact.html', contactPage(), '0.3');
-fs.readdirSync(path.join(ROOT, 'content/pages')).filter((f) => f.endsWith('.html')).forEach((f) => { const p = prosePage(f); write(p.path, p.html, '0.3'); });
+fs.readdirSync(path.join(CONTENT, 'pages')).filter((f) => f.endsWith('.html')).forEach((f) => { const p = prosePage(f); write(p.path, p.html, '0.3'); });
 write('directory.html', directoryPage(), '0.3');
 write('404.html', notFoundPage());
 q('js/articles-data.js', clientData());
